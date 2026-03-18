@@ -49,11 +49,11 @@
 ## Phase 5: Refinement & Fundamentals
 **Goal**: Add advanced filtering and improve reliability for v1.0.
 **Plans:** 4 plans
-- [ ] 05-01-PLAN.md — Reliability & Fundamentals Data.
-- [ ] 05-02-PLAN.md — Ranking Logic & Integration.
-- [ ] 05-03-PLAN.md — CLI Filters & Integration Tests.
-- [ ] 05-04-PLAN.md — Documentation & Polish.
+- [x] 05-01-PLAN.md — Reliability & Fundamentals Data.
+- [x] 05-02-PLAN.md — Ranking Logic & Integration.
+- [x] 05-03-PLAN.md — CLI Filters & Integration Tests.
+- [x] 05-04-PLAN.md — Documentation & Polish.
 
-- [ ] 5.1 Integrate fundamental data filtering (e.g., volume thresholds, price filters).
-- [ ] 5.2 Improve error handling and retry logic for data providers.
-- [ ] 5.3 Final documentation and user guide.
+- [x] 5.1 Integrate fundamental data filtering (e.g., volume thresholds, price filters).
+- [x] 5.2 Improve error handling and retry logic for data providers.
+- [x] 5.3 Final documentation and user guide.

@@ -162,10 +162,12 @@ def fetch_twse_tickers():
 ### Phase Requirements → Test Map
 | Req ID | Behavior | Test Type | Automated Command | File Exists? |
 |--------|----------|-----------|-------------------|-------------|
-| CORE-01 | Ticker fetching returns valid TWSE list | Integration | `pytest tests/integration/test_tickers.py` | ❌ Wave 0 |
-| CORE-02 | Bulk downloader handles 50+ tickers | Integration | `pytest tests/integration/test_download.py` | ❌ Wave 0 |
-| CORE-03 | Indicator matches reference values | Unit | `pytest tests/unit/test_indicators.py` | ❌ Wave 0 |
-| CORE-04 | Pattern detection (Houyi) accuracy | Unit | `pytest tests/unit/test_patterns.py` | ❌ Wave 0 |
+| 1.1 | Project structure following src layout | Integration | `python -m squeeze --help` | ❌ Wave 0 |
+| 1.2 | Ticker fetching returns valid TWSE/TPEx list | Integration | `pytest tests/integration/test_tickers.py` | ❌ Wave 0 |
+| 1.3 | Bulk downloader handles 50+ tickers | Integration | `pytest tests/integration/test_download.py` | ❌ Wave 0 |
+| 1.4 | Squeeze indicator refactored to pandas-ta | Unit | `pytest tests/unit/test_indicators.py` | ❌ Wave 0 |
+| 1.5 | Squeeze logic verified with unit tests | Unit | `pytest tests/unit/test_indicators.py` | ❌ Wave 0 |
+
 
 ### Sampling Rate
 - **Per task commit:** `pytest tests/unit`

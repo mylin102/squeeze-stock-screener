@@ -25,10 +25,17 @@ def scan(
     export: bool = typer.Option(False, "--export", "-e", help="Export results to CSV/JSON/MD"),
     plot: bool = typer.Option(False, "--plot", help="Generate charts for top picks"),
     top: int = typer.Option(10, "--top", help="Number of top picks to plot"),
-    output_dir: Optional[Path] = typer.Option(None, "--output-dir", "-o", help="Output directory for reports and charts")
+    output_dir: Optional[Path] = typer.Option(None, "--output-dir", "-o", help="Output directory for reports and charts"),
+    notify: bool = typer.Option(False, "--notify", help="Send notification summary (e.g., via LINE)"),
+    # New Fundamental Filters
+    min_mkt_cap: Optional[float] = typer.Option(None, "--min-mkt-cap", help="Minimum market capitalization (in billion TWD)"),
+    min_volume: Optional[float] = typer.Option(None, "--min-volume", help="Minimum average daily volume"),
+    min_score: Optional[float] = typer.Option(None, "--min-score", help="Minimum Value Score (0.0 - 1.0)"),
+    min_price: Optional[float] = typer.Option(None, "--min-price", help="Minimum stock price"),
+    max_price: Optional[float] = typer.Option(None, "--max-price", help="Maximum stock price")
 ):
     """
-    Scan all Taiwan stocks for specific technical patterns.
+    Scan all Taiwan stocks for specific technical patterns and fundamental filters.
     """
     console.print(f"[yellow]Scanning for {pattern} pattern...[/yellow]")
     
@@ -71,13 +78,32 @@ def scan(
     
     scanner = MarketScanner(all_tickers)
     
+    # Fetch fundamentals if any filters are set or if we want value scores
+    has_fund_filters = any([min_mkt_cap, min_volume, min_score])
+    if has_fund_filters:
+        with console.status("[bold green]Fetching fundamental data...[/bold green]"):
+            scanner.fetch_fundamentals()
+            
     with console.status("[bold green]Downloading market data...[/bold green]"):
         scanner.fetch_data(period=period)
         
     with console.status("[bold green]Analyzing patterns...[/bold green]"):
-        results = scanner.scan(config['fn'])
+        # Convert billion TWD to absolute value if needed by logic
+        mkt_cap_val = min_mkt_cap * 1e9 if min_mkt_cap else None
+        results = scanner.scan(
+            config['fn'],
+            min_mkt_cap=mkt_cap_val,
+            min_avg_volume=min_volume,
+            min_score=min_score
+        )
     
-    # Filter results for display
+    # 4. Apply Price Filters (Done after scan to use current Close price)
+    if min_price is not None:
+        results = [r for r in results if r.get('Close', 0) >= min_price]
+    if max_price is not None:
+        results = [r for r in results if r.get('Close', 0) <= max_price]
+
+    # Filter results for pattern match
     matched = [r for r in results if config['filter'](r)]
     matched = sorted(matched, key=config['sort_key'], reverse=True)
     
@@ -88,43 +114,40 @@ def scan(
     if pattern == "squeeze":
         table.add_column("Energy", style="yellow")
         table.add_column("Momentum", style="green")
-        table.add_column("Fired", style="red")
+        table.add_column("Score", style="blue")
         for r in matched:
             energy_stars = "★" * r.get('energy_level', 0)
             momentum_color = "green" if r.get('momentum', 0) > 0 else "red"
+            val_score = f"{r.get('value_score', 0):.2f}" if 'value_score' in r else "N/A"
             table.add_row(
                 r['ticker'],
                 f"{r['energy_level']} {energy_stars}",
                 f"[{momentum_color}]{r['momentum']:.4f}[/{momentum_color}]",
-                "YES" if r.get('fired') else ""
+                val_score
             )
     elif pattern == "houyi":
         table.add_column("Rally %", style="yellow")
         table.add_column("Fib Level", style="magenta")
-        table.add_column("Squeeze", style="blue")
-        table.add_column("Star", style="red")
+        table.add_column("Score", style="blue")
         for r in matched:
+            val_score = f"{r.get('value_score', 0):.2f}" if 'value_score' in r else "N/A"
             table.add_row(
                 r['ticker'],
                 f"{r['rally_pct']*100:.1f}%",
                 f"{r['fib_level']:.2f}",
-                "YES" if r.get('squeeze_on') else "no",
-                "YES" if r.get('shooting_star') else "no"
+                val_score
             )
     elif pattern == "whale":
         table.add_column("D-Sq", style="yellow")
         table.add_column("W-Sq", style="magenta")
-        table.add_column("D-Mom", style="green")
-        table.add_column("W-Mom", style="blue")
+        table.add_column("Score", style="blue")
         for r in matched:
-            d_mom_color = "green" if r.get('daily_momentum', 0) > 0 else "red"
-            w_mom_color = "green" if r.get('weekly_momentum', 0) > 0 else "red"
+            val_score = f"{r.get('value_score', 0):.2f}" if 'value_score' in r else "N/A"
             table.add_row(
                 r['ticker'],
                 "YES" if r.get('daily_squeeze') else "no",
                 "YES" if r.get('weekly_squeeze') else "no",
-                f"[{d_mom_color}]{r['daily_momentum']:.2f}[/{d_mom_color}]",
-                f"[{w_mom_color}]{r['weekly_momentum']:.2f}[/{w_mom_color}]"
+                val_score
             )
     
     console.print(table)
@@ -167,6 +190,22 @@ def scan(
                     console.print(f"  [green]✔[/green] Generated chart for {ticker}")
                 except Exception as e:
                     console.print(f"  [red]✘[/red] Error plotting {ticker}: {str(e)}")
+
+    # Handle Notifications
+    if notify:
+        from squeeze.report.notifier import LineNotifier
+        notifier = LineNotifier()
+        msg = f"Squeeze Scan Complete!\nPattern: {pattern}\nMatches: {len(matched)}"
+        if matched:
+            top_ticker = matched[0]['ticker']
+            msg += f"\nTop Pick: {top_ticker}"
+            if 'value_score' in matched[0]:
+                msg += f" (Value: {matched[0]['value_score']:.2f})"
+        
+        if notifier.send_summary(msg):
+            console.print("[green]Notification sent successfully.[/green]")
+        else:
+            console.print("[red]Failed to send notification.[/red]")
 
 @app.command(name="fetch-tickers")
 def fetch_tickers():

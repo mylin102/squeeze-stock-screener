@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "squeeze"
-version = "0.1.0"
+version = "1.0.0"
 authors = [
   { name = "GSD Executor" },
 ]
@@ -17,9 +17,12 @@ dependencies = [
     "pandas-ta",
     "typer",
     "requests",
-    "requests-cache",
     "rich",
     "mplfinance",
+    "jinja2",
+    "line-bot-sdk",
+    "tenacity",
+    "scipy",
     "lxml",
     "html5lib",
 ]

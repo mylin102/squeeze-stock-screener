@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Data & Cache
+*.sqlite
+.env
+.venv
+venv/
+ENV/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Results & Exports
+# Keep the directory but ignore specific artifacts if desired
+# exports/
+logs/

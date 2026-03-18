@@ -129,7 +129,7 @@ def detect_whale_trading(df_daily: pd.DataFrame) -> dict:
     Criteria:
     1. Daily Squeeze ON.
     2. Weekly Squeeze ON.
-    3. Momentum positive on both Daily and Weekly.
+    3. Momentum not deeply negative on both (>-0.5).
     
     Args:
         df_daily: DataFrame with Daily OHLCV data.
@@ -137,10 +137,53 @@ def detect_whale_trading(df_daily: pd.DataFrame) -> dict:
     Returns:
         dict: Pattern detection results and metadata.
     """
+    if df_daily.empty or len(df_daily) < 100:
+        return {
+            'is_whale': False,
+            'daily_squeeze': False,
+            'weekly_squeeze': False,
+            'daily_momentum': 0.0,
+            'weekly_momentum': 0.0
+        }
+
+    # 1. Daily indicators
+    df_daily_res = calculate_squeeze_indicators(df_daily)
+    latest_daily = df_daily_res.iloc[-1]
+    
+    # 2. Resample to Weekly
+    # Ensure index is datetime for resampling
+    if not isinstance(df_daily.index, pd.DatetimeIndex):
+        df_daily.index = pd.to_datetime(df_daily.index)
+        
+    logic = {'Open': 'first', 'High': 'max', 'Low': 'min', 'Close': 'last', 'Volume': 'sum'}
+    df_weekly = df_daily.resample('W').apply(logic).dropna()
+    
+    if len(df_weekly) < 30:
+        return {
+            'is_whale': False,
+            'daily_squeeze': bool(latest_daily['Squeeze_On']),
+            'weekly_squeeze': False,
+            'daily_momentum': float(latest_daily['Momentum']),
+            'weekly_momentum': 0.0
+        }
+        
+    # 3. Weekly indicators
+    df_weekly_res = calculate_squeeze_indicators(df_weekly)
+    latest_weekly = df_weekly_res.iloc[-1]
+    
+    # 4. Alignment
+    daily_sq = bool(latest_daily['Squeeze_On'])
+    weekly_sq = bool(latest_weekly['Squeeze_On'])
+    daily_mom = float(latest_daily['Momentum'])
+    weekly_mom = float(latest_weekly['Momentum'])
+    
+    # Signal if both are squeezed and momentum is positive
+    is_whale = daily_sq and weekly_sq and daily_mom > 0 and weekly_mom > 0
+    
     return {
-        'is_whale': False,
-        'daily_squeeze': False,
-        'weekly_squeeze': False,
-        'daily_momentum': 0.0,
-        'weekly_momentum': 0.0
+        'is_whale': bool(is_whale),
+        'daily_squeeze': daily_sq,
+        'weekly_squeeze': weekly_sq,
+        'daily_momentum': daily_mom,
+        'weekly_momentum': weekly_mom
     }
