@@ -3,7 +3,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 from typing import List, Dict, Any, Optional
-from jinja2 import Environment, FileSystemLoader
+from jinja2 import Environment, PackageLoader, FileSystemLoader
 
 
 class ReportExporter:
@@ -13,14 +13,16 @@ class ReportExporter:
 
     def __init__(self, templates_dir: Optional[Path] = None):
         if templates_dir is None:
-            # Default to the templates directory relative to this file
-            templates_dir = Path(__file__).parent / "templates"
-        
-        self.templates_dir = templates_dir
-        self.jinja_env = Environment(
-            loader=FileSystemLoader(str(self.templates_dir)),
-            autoescape=True
-        )
+            # Use PackageLoader for robust template discovery in installed packages
+            self.jinja_env = Environment(
+                loader=PackageLoader("squeeze.report", "templates"),
+                autoescape=True
+            )
+        else:
+            self.jinja_env = Environment(
+                loader=FileSystemLoader(str(templates_dir)),
+                autoescape=True
+            )
 
     def export(self, results: List[Dict[str, Any]], output_base_dir: Path) -> Dict[str, Path]:
         """

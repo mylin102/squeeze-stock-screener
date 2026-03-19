@@ -40,6 +40,9 @@ squeeze = "squeeze.cli:app"
 where = ["src"]
 include = ["squeeze*"]
 
+[tool.setuptools.package-data]
+"squeeze.report.templates" = ["*.j2"]
+
 [tool.ruff]
 line-length = 88
 target-version = "py39"
