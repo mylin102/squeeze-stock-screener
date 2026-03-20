@@ -253,9 +253,10 @@ def scan(
         email_notifier = EmailNotifier()
         exporter = ReportExporter()
         
-        buy_signals = ["強烈買入 (爆發)", "買入 (動能增強)"]
+        # Broaden criteria: Include Convergence as an early signal
+        buy_signals = ["強烈買入 (爆發)", "買入 (動能增強)", "觀察 (跌勢收斂)"]
         report_matched = [r for r in matched if r.get('Signal') in buy_signals]
-        console.print(f"[yellow]Filtering for email: {len(report_matched)} Buy signals found.[/yellow]")
+        console.print(f"[yellow]Filtering for email: {len(report_matched)} potential signals found.[/yellow]")
         
         report_content = exporter.render_summary(report_matched, perf_results=perf_results)
         subject = f"Squeeze 掃描報告 ({pattern}) - {pd.Timestamp.now().strftime('%Y-%m-%d')}"

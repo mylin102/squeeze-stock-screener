@@ -96,7 +96,7 @@ def test_to_markdown(exporter, mock_results, tmp_path):
         content = f.read()
         
         assert "# Squeeze 技術指標掃描 - 每日摘要" in content
-        assert "符合 **買入** 篩選條件" in content
+        assert "符合 **買入/觀察** 篩選條件" in content
         assert "AAPL" in content
         assert "買入 (動能增強)" in content
 
