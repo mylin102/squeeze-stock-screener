@@ -257,7 +257,7 @@ def scan(
         report_matched = [r for r in matched if r.get('Signal') in buy_signals]
         console.print(f"[yellow]Filtering for email: {len(report_matched)} Buy signals found.[/yellow]")
         
-        report_content = exporter.render_summary(matched, perf_results=perf_results)
+        report_content = exporter.render_summary(report_matched, perf_results=perf_results)
         subject = f"Squeeze 掃描報告 ({pattern}) - {pd.Timestamp.now().strftime('%Y-%m-%d')}"
         
         if email_notifier.send_email(subject, report_content):
