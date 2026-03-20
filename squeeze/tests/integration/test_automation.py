@@ -14,12 +14,19 @@ def test_scan_automation_triggers():
     # Mock data discovery
     with patch("squeeze.cli.fetch_tickers_with_names") as mock_fetch:
         mock_fetch.return_value = {"2330.TW": "台積電"}
-        
+
         # Mock scanner to return a dummy result
-        with patch("squeeze.cli.MarketScanner") as mock_scanner_cls:
+        with patch("squeeze.cli.MarketScanner") as mock_scanner_cls, \
+             patch("squeeze.cli.PerformanceTracker") as mock_tracker_cls:
+
             mock_scanner = MagicMock()
             mock_scanner_cls.return_value = mock_scanner
-            
+
+            # Mock tracker to return empty list initially
+            mock_tracker = MagicMock()
+            mock_tracker_cls.return_value = mock_tracker
+            mock_tracker.get_active_tracking_list.return_value = []
+
             # Setup scanner to return one match for squeeze
             mock_scanner.scan.return_value = [
                 {
@@ -27,10 +34,10 @@ def test_scan_automation_triggers():
                     "is_squeezed": True,
                     "energy_level": 3,
                     "momentum": 0.5,
-                    "fired": False
+                    "fired": False,
+                    "Signal": "買入 (動能增強)"
                 }
-            ]
-            
+            ]            
             # Mock exporters and notifiers
             with patch("squeeze.cli.ReportExporter") as mock_exporter_cls, \
                  patch("squeeze.cli.plot_ticker") as mock_plot, \
@@ -79,9 +86,8 @@ def test_scan_automation_triggers():
                 args, _ = mock_notifier.send_summary.call_args
                 summary_msg = args[0]
                 assert "Squeeze Scan Complete" in summary_msg
-                assert "Found 1 matches" in summary_msg
+                assert "Buy: 1 | Sell: 0" in summary_msg
                 assert "2330.TW" in summary_msg
-
 def test_scan_houyi_triggers():
     """
     Test that 'squeeze scan --pattern houyi' correctly triggers logic.
@@ -89,7 +95,9 @@ def test_scan_houyi_triggers():
     with patch("squeeze.cli.fetch_tickers_with_names") as mock_fetch:
         mock_fetch.return_value = {"2330.TW": "台積電"}
         
-        with patch("squeeze.cli.MarketScanner") as mock_scanner_cls:
+        with patch("squeeze.cli.MarketScanner") as mock_scanner_cls, \
+             patch("squeeze.cli.PerformanceTracker") as mock_tracker_cls:
+            
             mock_scanner = MagicMock()
             mock_scanner_cls.return_value = mock_scanner
             mock_scanner.scan.return_value = [
@@ -99,9 +107,14 @@ def test_scan_houyi_triggers():
                     "rally_pct": 0.2,
                     "fib_level": 0.5,
                     "squeeze_on": True,
-                    "shooting_star": False
+                    "shooting_star": False,
+                    "Signal": "買入 (動能增強)"
                 }
             ]
+            
+            mock_tracker = MagicMock()
+            mock_tracker_cls.return_value = mock_tracker
+            mock_tracker.get_active_tracking_list.return_value = []
             
             with patch("squeeze.cli.LineNotifier") as mock_notifier_cls:
                 mock_notifier = MagicMock()
@@ -123,4 +136,4 @@ def test_scan_houyi_triggers():
                 args, _ = mock_notifier.send_summary.call_args
                 summary_msg = args[0]
                 assert "Squeeze Scan Complete: houyi" in summary_msg
-                assert "20.0%" in summary_msg
+                assert "Buy: 1 | Sell: 0" in summary_msg

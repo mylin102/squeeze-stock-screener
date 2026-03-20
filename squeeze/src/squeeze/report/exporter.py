@@ -85,37 +85,43 @@ class ReportExporter:
 
     def to_markdown(self, results: List[Dict[str, Any]], path: Path) -> None:
         """Renders the Markdown summary using Jinja2."""
-        content = self.render_summary(results)
-        
+        # For backward compatibility, we split the results into buy/sell sections
+        buy_signals = ["強烈買入 (爆發)", "買入 (動能增強)", "觀察 (跌勢收斂)"]
+        sell_signals = ["強烈賣出 (跌破)", "賣出 (動能轉弱)"]
+
+        buy_results = [r for r in results if r.get('Signal') in buy_signals]
+        sell_results = [r for r in results if r.get('Signal') in sell_signals]
+
+        content = self.render_summary(buy_results, sell_results)
+
         with open(path, 'w', encoding='utf-8') as f:
             f.write(content)
 
-    def render_summary(self, results: List[Dict[str, Any]], 
-                       perf_results: Optional[List[Dict[str, Any]]] = None,
-                       active_tracking: Optional[List[Dict[str, Any]]] = None) -> str:
-        """Renders the summary content as a string, filtering for Buy signals."""
+    def render_summary(self, 
+                       buy_results: List[Dict[str, Any]] = None, 
+                       sell_results: List[Dict[str, Any]] = None,
+                       tracking_buys: Optional[List[Dict[str, Any]]] = None,
+                       tracking_sells: Optional[List[Dict[str, Any]]] = None) -> str:
+        """Renders the summary content with Buy/Sell sections and tracking."""
         template = self.jinja_env.get_template("summary.md.j2")
 
-        # Define targeted buy signals
-        buy_signals = ["強烈買入 (爆發)", "買入 (動能增強)", "觀察 (跌勢收斂)"]
+        buy_results = buy_results or []
+        sell_results = sell_results or []
 
-        # Filter results: only those with specific buy signals
-        filtered_results = [r for r in results if r.get('Signal') in buy_signals]
-        filtered_results = sorted(filtered_results, key=lambda x: x.get('momentum', 0), reverse=True)
-
-        top_picks = filtered_results[:10] if len(filtered_results) > 10 else filtered_results
-
+        # Take Top 10 for display in report
+        top_buys = sorted(buy_results, key=lambda x: x.get('momentum', 0), reverse=True)[:10]
+        top_sells = sorted(sell_results, key=lambda x: x.get('momentum', 0), reverse=False)[:10]
         render_data = {
             "date": self._get_taiwan_now().strftime("%Y-%m-%d %H:%M:%S") + " (TST)",
-            "results": [self._format_result(r) for r in filtered_results],
-            "top_picks": [self._format_result(r) for r in top_picks],
-            "count": len(filtered_results),
-            "perf_results": perf_results or [],
-            "active_tracking": active_tracking or []
+            "buy_results": [self._format_result(r) for r in top_buys],
+            "buy_count": len(buy_results),
+            "sell_results": [self._format_result(r) for r in top_sells],
+            "sell_count": len(sell_results),
+            "tracking_buys": tracking_buys or [],
+            "tracking_sells": tracking_sells or []
         }
 
         return template.render(**render_data)
-
     def _format_result(self, r: Dict[str, Any]) -> Dict[str, Any]:
         """Ensures common keys exist for the template."""
         return {

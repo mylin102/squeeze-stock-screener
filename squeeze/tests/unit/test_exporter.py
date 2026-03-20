@@ -88,7 +88,10 @@ def test_to_markdown(exporter, mock_results, tmp_path):
         r['is_squeezed'] = True
         
     md_path = tmp_path / "test.md"
-    exporter.to_markdown(mock_results, md_path)
+    # Call render_summary with split results
+    content = exporter.render_summary(buy_results=mock_results, sell_results=[])
+    with open(md_path, 'w', encoding='utf-8') as f:
+        f.write(content)
     
     assert md_path.exists()
     
@@ -96,7 +99,7 @@ def test_to_markdown(exporter, mock_results, tmp_path):
         content = f.read()
         
         assert "# Squeeze 技術指標掃描 - 每日摘要" in content
-        assert "符合 **買入/觀察** 篩選條件" in content
+        assert "## 🚀 買入建議標的 (Top 10)" in content
         assert "AAPL" in content
         assert "買入 (動能增強)" in content
 

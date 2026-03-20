@@ -203,17 +203,24 @@ def scan(
                     console.print(f"  [red]✘[/red] Error plotting {ticker}: {str(e)}")
 
     # Handle Performance Tracking
-    active_tracking = []
+    tracking_buys = []
+    tracking_sells = []
     try:
         tracker = PerformanceTracker(Path("recommendations.csv"))
         # 1. Update performance for all active tracking items
         tracker.update_daily_performance()
-        active_tracking = tracker.get_active_tracking_list()
+        tracking_buys = tracker.get_active_tracking_list(rec_type='buy')
+        tracking_sells = tracker.get_active_tracking_list(rec_type='sell')
         
-        # 2. Record today's recommendations
+        # 2. Record today's recommendations (Top 10 only)
         buy_signals = ["強烈買入 (爆發)", "買入 (動能增強)", "觀察 (跌勢收斂)"]
+        sell_signals = ["強烈賣出 (跌破)", "賣出 (動能轉弱)"]
+        
         today_buys = [r for r in matched if r.get('Signal') in buy_signals]
-        tracker.record_recommendations(today_buys)
+        today_sells = [r for r in matched if r.get('Signal') in sell_signals]
+        
+        tracker.record_recommendations(today_buys, rec_type='buy')
+        tracker.record_recommendations(today_sells, rec_type='sell')
     except Exception as e:
         console.print(f"[red]Error during performance tracking: {str(e)}[/red]")
 
@@ -223,22 +230,17 @@ def scan(
         
         # 1. LINE Notification (Short Summary)
         notifier = LineNotifier()
-        msg = f"Squeeze Scan Complete: {pattern}\nFound {len(matched)} matches"
-        if matched:
-            top = matched[0]
-            top_ticker = top['ticker']
-            msg += f"\nTop Pick: {top_ticker}"
-            
-            if pattern == "houyi" and 'rally_pct' in top:
-                msg += f" (Rally: {top['rally_pct']*100:.1f}%)"
-            elif 'value_score' in top:
-                msg += f" (Value: {top['value_score']:.2f})"
+        msg = f"Squeeze Scan Complete: {pattern}\nBuy: {len(today_buys)} | Sell: {len(today_sells)}"
+        if today_buys:
+            msg += f"\nTop Buy: {today_buys[0]['ticker']} ({today_buys[0].get('name', 'N/A')})"
         
-        # Append performance brief to LINE if exists
-        if active_tracking:
-            profitable = len([p for p in active_tracking if p['return_pct'] > 0])
-            msg += f"\n\n📊 Tracking {len(active_tracking)} stocks"
-            msg += f"\nProfitable: {profitable}/{len(active_tracking)}"
+        # Append performance brief to LINE
+        total_tracking = len(tracking_buys) + len(tracking_sells)
+        if total_tracking > 0:
+            profitable_buys = len([p for p in tracking_buys if p['return_pct'] > 0])
+            successful_sells = len([p for p in tracking_sells if p['return_pct'] < 0])
+            msg += f"\n\n📊 Tracking {total_tracking} stocks"
+            msg += f"\nCorrect: {profitable_buys + successful_sells}/{total_tracking}"
         
         if notifier.send_summary(msg):
             console.print("[green]LINE notification sent successfully.[/green]")
@@ -249,12 +251,12 @@ def scan(
         email_notifier = EmailNotifier()
         exporter = ReportExporter()
         
-        # Broaden criteria: Include Convergence as an early signal
-        buy_signals = ["強烈買入 (爆發)", "買入 (動能增強)", "觀察 (跌勢收斂)"]
-        report_matched = [r for r in matched if r.get('Signal') in buy_signals]
-        console.print(f"[yellow]Filtering for email: {len(report_matched)} potential signals found.[/yellow]")
-        
-        report_content = exporter.render_summary(report_matched, active_tracking=active_tracking)
+        report_content = exporter.render_summary(
+            buy_results=today_buys, 
+            sell_results=today_sells,
+            tracking_buys=tracking_buys,
+            tracking_sells=tracking_sells
+        )
         subject = f"Squeeze 掃描報告 ({pattern}) - {pd.Timestamp.now().strftime('%Y-%m-%d')}"
         
         if email_notifier.send_email(subject, report_content):
