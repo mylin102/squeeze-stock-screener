@@ -117,8 +117,10 @@ class ReportExporter:
         """Ensures common keys exist for the template."""
         return {
             "ticker": r.get('ticker'),
+            "name": r.get('name', '未知'),
             "close": f"{r.get('Close', 0):.2f}",
             "momentum": r.get('momentum') or r.get('daily_momentum') or 0,
             "energy": r.get('energy_level', 0),
-            "squeeze_active": r.get('is_squeezed') or r.get('is_houyi') or r.get('is_whale')
+            "squeeze_active": r.get('is_squeezed') or r.get('is_houyi') or r.get('is_whale'),
+            "signal": r.get('Signal', '觀望')
         }

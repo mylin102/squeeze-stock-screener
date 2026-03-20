@@ -6,7 +6,7 @@ from pathlib import Path
 
 from typing import List, Optional, Dict, Any
 
-from squeeze.data.tickers import fetch_tickers as do_fetch_tickers
+from squeeze.data.tickers import fetch_tickers_with_names
 from squeeze.data.downloader import download_market_data
 from squeeze.engine.indicators import calculate_squeeze_indicators
 from squeeze.engine.patterns import detect_squeeze, detect_houyi_shooting_sun, detect_whale_trading
@@ -69,7 +69,8 @@ def scan(
     config = pattern_map[pattern]
     
     console.print("[yellow]Discovering Taiwan market tickers...[/yellow]")
-    all_tickers = do_fetch_tickers()
+    ticker_map = fetch_tickers_with_names()
+    all_tickers = sorted(list(ticker_map.keys()))
     
     if limit:
         all_tickers = all_tickers[:limit]
@@ -77,7 +78,7 @@ def scan(
     
     console.print(f"[green]Scanning {len(all_tickers)} tickers...[/green]")
     
-    scanner = MarketScanner(all_tickers)
+    scanner = MarketScanner(all_tickers, ticker_names=ticker_map)
     
     # Fetch fundamentals if any filters are set or if we want value scores
     has_fund_filters = any([min_mkt_cap, min_volume, min_score])
@@ -111,6 +112,8 @@ def scan(
     # Create the result table
     table = Table(title=f"{config['title']} ({len(matched)} matches)")
     table.add_column("Ticker", style="cyan")
+    table.add_column("Name", style="magenta")
+    table.add_column("Signal", style="bold")
     
     if pattern == "squeeze":
         table.add_column("Energy", style="yellow")
@@ -122,6 +125,8 @@ def scan(
             val_score = f"{r.get('value_score', 0):.2f}" if 'value_score' in r else "N/A"
             table.add_row(
                 r['ticker'],
+                r.get('name', '未知'),
+                r.get('Signal', '觀望'),
                 f"{r['energy_level']} {energy_stars}",
                 f"[{momentum_color}]{r['momentum']:.4f}[/{momentum_color}]",
                 val_score
@@ -134,6 +139,8 @@ def scan(
             val_score = f"{r.get('value_score', 0):.2f}" if 'value_score' in r else "N/A"
             table.add_row(
                 r['ticker'],
+                r.get('name', '未知'),
+                r.get('Signal', '觀望'),
                 f"{r['rally_pct']*100:.1f}%",
                 f"{r['fib_level']:.2f}",
                 val_score
@@ -146,6 +153,8 @@ def scan(
             val_score = f"{r.get('value_score', 0):.2f}" if 'value_score' in r else "N/A"
             table.add_row(
                 r['ticker'],
+                r.get('name', '未知'),
+                r.get('Signal', '觀望'),
                 "YES" if r.get('daily_squeeze') else "no",
                 "YES" if r.get('weekly_squeeze') else "no",
                 val_score

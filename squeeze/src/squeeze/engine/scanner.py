@@ -18,14 +18,16 @@ class MarketScanner:
     - Multiprocessing for CPU bound pattern detection.
     """
     
-    def __init__(self, tickers: List[str]):
+    def __init__(self, tickers: List[str], ticker_names: Optional[Dict[str, str]] = None):
         """
         Initialize the scanner with a list of tickers.
         
         Args:
             tickers: List of ticker strings (e.g., ["2330.TW", "2317.TW"]).
+            ticker_names: Optional dictionary mapping ticker to Chinese name.
         """
         self.tickers = tickers
+        self.ticker_names = ticker_names or {}
         self.data: pd.DataFrame = pd.DataFrame()
         self.fundamentals: pd.DataFrame = pd.DataFrame()
         self.results: List[Dict[str, Any]] = []
@@ -33,10 +35,6 @@ class MarketScanner:
     def fetch_data(self, period: str = "2y", data: pd.DataFrame = None):
         """
         Fetch market data for all tickers or use provided data.
-        
-        Args:
-            period: Time range for data (default "2y").
-            data: Optional pre-fetched data to inject (useful for testing).
         """
         if data is not None:
             self.data = data
@@ -63,15 +61,6 @@ class MarketScanner:
              min_score: Optional[float] = None) -> List[Dict[str, Any]]:
         """
         Scan the downloaded market data for a given pattern and apply fundamental filters.
-        
-        Args:
-            pattern_fn: A function that takes a ticker DataFrame and returns a results dict.
-            min_mkt_cap: Minimum market cap filter.
-            min_avg_volume: Minimum average volume filter.
-            min_score: Minimum Value Score filter (0-1).
-            
-        Returns:
-            List[Dict[str, Any]]: A list of result dictionaries for each ticker.
         """
         if self.data.empty:
             logger.warning("No data to scan. Call fetch_data() first.")
@@ -106,7 +95,6 @@ class MarketScanner:
         else:
             for ticker in filtered_tickers:
                 try:
-                    # yfinance with group_by='ticker' returns a MultiIndex column DataFrame
                     if ticker in self.data.columns.levels[0]:
                         ticker_df = self.data[ticker].dropna(subset=['Close'])
                         if not ticker_df.empty:
@@ -128,6 +116,7 @@ class MarketScanner:
                 try:
                     result = future.result()
                     result['ticker'] = ticker
+                    result['name'] = self.ticker_names.get(ticker, "未知")
                     
                     # Merge fundamental data into results
                     if ticker in fundamental_map:
@@ -138,6 +127,7 @@ class MarketScanner:
                     logger.error(f"Error scanning ticker {ticker}: {str(e)}")
                     results.append({
                         'ticker': ticker,
+                        'name': self.ticker_names.get(ticker, "未知"),
                         'error': str(e),
                         'is_squeezed': False
                     })

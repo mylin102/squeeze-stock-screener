@@ -7,19 +7,19 @@
 ## 精選個股 (Top Picks)
 以下個股顯示活躍的 Squeeze 擠壓狀態或強勁動能：
 
-| 股票代碼 | Squeeze 狀態 | 動能 (Momentum) | 能量 (Energy) |
-| :--- | :--- | :--- | :--- |
+| 股票代碼 | 名稱 | 操作建議 | Squeeze 狀態 | 動能 (Momentum) | 能量 (Energy) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
 {% for item in top_picks %}
-| **{{ item.ticker }}** | {{ '活躍' if item.squeeze_active else '非活躍' }} | {{ "%.4f"|format(item.momentum) if item.momentum else 'N/A' }} | {{ "%.4f"|format(item.energy) if item.energy else 'N/A' }} |
+| **{{ item.ticker }}** | {{ item.name }} | **{{ item.signal }}** | {{ '活躍' if item.squeeze_active else '非活躍' }} | {{ "%.4f"|format(item.momentum) if item.momentum else 'N/A' }} | {{ "%.4f"|format(item.energy) if item.energy else 'N/A' }} |
 {% endfor %}
 
 ## 詳細結果
 以下為完整掃描清單：
 
-| 股票代碼 | 收盤價 | 動能 (Momentum) | 能量 (Energy) | Squeeze 擠壓中 |
-| :--- | :--- | :--- | :--- | :--- |
+| 股票代碼 | 名稱 | 收盤價 | 操作建議 | 動能 (Momentum) | Squeeze 擠壓中 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
 {% for item in results %}
-| {{ item.ticker }} | {{ item.close }} | {{ "%.4f"|format(item.momentum) if item.momentum else 'N/A' }} | {{ "%.4f"|format(item.energy) if item.energy else 'N/A' }} | {{ '是' if item.squeeze_active else '否' }} |
+| {{ item.ticker }} | {{ item.name }} | {{ item.close }} | {{ item.signal }} | {{ "%.4f"|format(item.momentum) if item.momentum else 'N/A' }} | {{ '是' if item.squeeze_active else '否' }} |
 {% endfor %}
 
 ---

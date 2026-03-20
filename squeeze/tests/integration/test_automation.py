@@ -12,8 +12,8 @@ def test_scan_automation_triggers():
     triggers the respective components correctly.
     """
     # Mock data discovery
-    with patch("squeeze.cli.do_fetch_tickers") as mock_fetch:
-        mock_fetch.return_value = ["2330.TW"]
+    with patch("squeeze.cli.fetch_tickers_with_names") as mock_fetch:
+        mock_fetch.return_value = {"2330.TW": "台積電"}
         
         # Mock scanner to return a dummy result
         with patch("squeeze.cli.MarketScanner") as mock_scanner_cls:
@@ -86,8 +86,8 @@ def test_scan_houyi_triggers():
     """
     Test that 'squeeze scan --pattern houyi' correctly triggers logic.
     """
-    with patch("squeeze.cli.do_fetch_tickers") as mock_fetch:
-        mock_fetch.return_value = ["2330.TW"]
+    with patch("squeeze.cli.fetch_tickers_with_names") as mock_fetch:
+        mock_fetch.return_value = {"2330.TW": "台積電"}
         
         with patch("squeeze.cli.MarketScanner") as mock_scanner_cls:
             mock_scanner = MagicMock()
