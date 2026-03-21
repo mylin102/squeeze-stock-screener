@@ -31,21 +31,30 @@ def plot_ticker(ticker_df: pd.DataFrame, ticker_symbol: str, output_path: str):
     
     # Ensure Squeeze indicators exist
     if 'Momentum' not in df.columns or 'Squeeze_On' not in df.columns:
-        # Avoid circular import if possible, but for simplicity:
         from squeeze.engine.indicators import calculate_squeeze_indicators
         df = calculate_squeeze_indicators(df)
 
+    # --- OPTIMIZATION: Limit Plotting Range to 6 Months ---
+    # We keep full data for indicators but only plot the last ~130 bars (6 months)
+    plot_df = df.tail(130).copy()
+    
+    # Recalculate indicators for the plotting range if needed (or just slice them)
+    bb_upper_p = bb_upper.tail(130)
+    bb_lower_p = bb_lower.tail(130)
+    kc_upper_p = kc_upper.tail(130)
+    kc_lower_p = kc_lower.tail(130)
+
     plots = [
         # Bollinger Bands (dashed)
-        mpf.make_addplot(bb_upper, color='blue', linestyle='dashed', alpha=0.3),
-        mpf.make_addplot(bb_lower, color='blue', linestyle='dashed', alpha=0.3),
+        mpf.make_addplot(bb_upper_p, color='blue', linestyle='dashed', alpha=0.3),
+        mpf.make_addplot(bb_lower_p, color='blue', linestyle='dashed', alpha=0.3),
         # Keltner Channels (solid)
-        mpf.make_addplot(kc_upper, color='orange', alpha=0.3),
-        mpf.make_addplot(kc_lower, color='orange', alpha=0.3),
+        mpf.make_addplot(kc_upper_p, color='orange', alpha=0.3),
+        mpf.make_addplot(kc_lower_p, color='orange', alpha=0.3),
     ]
     
     # Squeeze Momentum Histogram colors
-    mom = df['Momentum']
+    mom = plot_df['Momentum']
     hist_colors = []
     for i in range(len(mom)):
         val = mom.iloc[i]
@@ -53,30 +62,36 @@ def plot_ticker(ticker_df: pd.DataFrame, ticker_symbol: str, output_path: str):
         
         if val >= 0:
             if val >= prev_val:
-                hist_colors.append('cyan')
+                hist_colors.append('cyan') # Increasing bullish
             else:
-                hist_colors.append('blue')
+                hist_colors.append('blue') # Decreasing bullish
         else:
             if val <= prev_val:
-                hist_colors.append('red')
+                hist_colors.append('red') # Increasing bearish
             else:
-                hist_colors.append('maroon')
+                hist_colors.append('maroon') # Decreasing bearish
                 
-    plots.append(mpf.make_addplot(df['Momentum'], type='bar', panel=1, color=hist_colors, secondary_y=False))
+    plots.append(mpf.make_addplot(plot_df['Momentum'], type='bar', panel=1, color=hist_colors, secondary_y=False))
     
-    # Squeeze Dots (Red when Squeeze_On is True, Green when False)
-    squeeze_on = df['Squeeze_On']
+    # --- OPTIMIZATION: Squeeze Dots (Energy Markers) ---
+    squeeze_on = plot_df['Squeeze_On']
+    energy = plot_df['Energy_Level']
     dot_colors = ['red' if val else 'lime' for val in squeeze_on]
+    
+    # Scaled sizes: Higher energy = Larger dots
+    # Energy levels are 0-3. Map to sizes 10, 30, 60, 100
+    dot_sizes = [10 + (e * 40) if s else 10 for s, e in zip(squeeze_on, energy)]
+    
     # Plot dots at 0 on the momentum panel
-    plots.append(mpf.make_addplot(np.zeros(len(df)), type='scatter', markersize=20, marker='o', 
+    plots.append(mpf.make_addplot(np.zeros(len(plot_df)), type='scatter', markersize=dot_sizes, marker='o', 
                                   color=dot_colors, panel=1, secondary_y=False))
 
     # Ensure output directory exists
     os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
     
-    # Generate Plot
-    mpf.plot(df, type='candle', style='charles', addplot=plots, 
-             title=f"{ticker_symbol} - Squeeze Analysis", 
+    # Generate Plot using plot_df (6 months)
+    mpf.plot(plot_df, type='candle', style='charles', addplot=plots, 
+             title=f"{ticker_symbol} - Squeeze Analysis (6mo)", 
              savefig=output_path, volume=True, 
              panel_ratios=(4, 2), # Main plot and Indicators
              show_nontrading=False,
