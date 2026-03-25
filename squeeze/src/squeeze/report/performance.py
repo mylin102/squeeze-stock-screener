@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 from pathlib import Path
 from datetime import datetime, timedelta, timezone
 from typing import List, Dict, Any, Optional
@@ -25,6 +26,16 @@ class PerformanceTracker:
                 'current_price', 'return_pct', 'days_tracked', 'last_updated', 'status', 'type'
             ])
             df.to_csv(self.db_path, index=False)
+        else:
+            # Basic cleanup of existing DB
+            try:
+                df = pd.read_csv(self.db_path)
+                df['entry_price'] = pd.to_numeric(df['entry_price'], errors='coerce').fillna(0.0)
+                df['current_price'] = pd.to_numeric(df['current_price'], errors='coerce').fillna(0.0)
+                df['return_pct'] = pd.to_numeric(df['return_pct'], errors='coerce').fillna(0.0)
+                df.to_csv(self.db_path, index=False)
+            except Exception as e:
+                logger.error(f"Error cleaning up performance DB: {e}")
 
     def record_recommendations(self, results: List[Dict[str, Any]], rec_type: str = 'buy'):
         """
@@ -46,13 +57,19 @@ class PerformanceTracker:
         new_records = []
         
         for r in sorted_results:
+            # Ensure we have a valid entry price
+            price = r.get('Close')
+            if price is None or (isinstance(price, float) and np.isnan(price)):
+                logger.warning(f"Skipping recording for {r.get('ticker')} due to missing Close price")
+                continue
+
             new_records.append({
                 'date': now_str,
                 'ticker': r.get('ticker'),
                 'name': r.get('name'),
-                'entry_price': r.get('Close'),
+                'entry_price': float(price),
                 'signal': r.get('Signal'),
-                'current_price': r.get('Close'),
+                'current_price': float(price),
                 'return_pct': 0.0,
                 'days_tracked': 0,
                 'last_updated': now_str,
@@ -60,6 +77,9 @@ class PerformanceTracker:
                 'type': rec_type
             })
         
+        if not new_records:
+            return
+
         df_new = pd.DataFrame(new_records)
         try:
             df_old = pd.read_csv(self.db_path)
@@ -116,10 +136,16 @@ class PerformanceTracker:
                         continue
                 
                 entry_price = float(row['entry_price'])
-                # Return calculation is the same for both buy/sell initially, 
-                # but user views positive return on 'sell' as good (price went down).
-                # We'll stick to price change % here and handle display in template.
-                return_pct = ((price_now - entry_price) / entry_price) * 100
+                
+                # If entry price was nan/0 in DB, try to fix it with current price if it's the first update
+                if (np.isnan(entry_price) or entry_price <= 0) and price_now > 0:
+                    entry_price = price_now
+                    df.at[index, 'entry_price'] = entry_price
+                
+                if entry_price > 0:
+                    return_pct = ((price_now - entry_price) / entry_price) * 100
+                else:
+                    return_pct = 0.0
                 
                 rec_date = datetime.strptime(row['date'], "%Y-%m-%d").replace(tzinfo=timezone(timedelta(hours=8)))
                 days_passed = (now - rec_date).days
@@ -129,7 +155,7 @@ class PerformanceTracker:
                 df.at[index, 'days_tracked'] = days_passed
                 df.at[index, 'last_updated'] = now_str
                 
-                if days_passed >= 14:
+                if days_passed >= 30:
                     df.at[index, 'status'] = 'completed'
                 
                 results.append(df.loc[index].to_dict())
@@ -138,6 +164,7 @@ class PerformanceTracker:
 
         df.to_csv(self.db_path, index=False)
         return results
+
 
     def get_active_tracking_list(self, rec_type: Optional[str] = None) -> List[Dict[str, Any]]:
         """Returns currently tracking recommendations filtered by type."""

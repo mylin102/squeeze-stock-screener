@@ -29,10 +29,10 @@
 
 {% if tracking_buys %}
 ---
-## 📈 買入標的績效追蹤 (14天)
-目前追蹤中之買入標的即時表現：
+## 📈 買入標績效追蹤 (30天)
+追蹤中標的表現：
 
-| 進場日期 | 代碼 | 名稱 | 當時價格 | 目前價格 | 天數 | 目前報酬 (%) |
+| 進場日期 | 代碼 | 名稱 | 進場價 | 現價 | 天數 | 報酬 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 {% for perf in tracking_buys %}
 | {{ perf.date }} | **{{ perf.ticker }}** | {{ perf.name }} | {{ "%.2f"|format(perf.entry_price) }} | {{ "%.2f"|format(perf.current_price) }} | {{ perf.days_tracked }} | **{{ "%.2f"|format(perf.return_pct) }}%** |
@@ -41,10 +41,10 @@
 
 {% if tracking_sells %}
 ---
-## 📉 賣出標的績效追蹤 (14天)
-目前追蹤中之賣出標的即時表現（報酬率負值代表價格下跌，符合預期）：
+## 📉 賣出標績效追蹤 (30天)
+追蹤中標的表現：
 
-| 建議日期 | 代碼 | 名稱 | 當時價格 | 目前價格 | 天數 | 價格變動 (%) |
+| 建議日期 | 代碼 | 名稱 | 建議價 | 現價 | 天數 | 變動 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 {% for perf in tracking_sells %}
 | {{ perf.date }} | **{{ perf.ticker }}** | {{ perf.name }} | {{ "%.2f"|format(perf.entry_price) }} | {{ "%.2f"|format(perf.current_price) }} | {{ perf.days_tracked }} | **{{ "%.2f"|format(perf.return_pct) }}%** |

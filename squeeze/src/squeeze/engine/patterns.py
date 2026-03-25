@@ -37,6 +37,7 @@ def detect_squeeze(df: pd.DataFrame) -> dict:
         'momentum': float(latest_bar['Momentum']),
         'fired': bool(latest_bar['Fired']),
         'Signal': str(latest_bar.get('Signal', '觀望')),
+        'Close': float(latest_bar['Close']),
         'timestamp': str(latest_bar.name)
     }
 
@@ -62,7 +63,8 @@ def detect_houyi_shooting_sun(df: pd.DataFrame) -> dict:
             'rally_pct': 0.0,
             'fib_level': 0.0,
             'squeeze_on': False,
-            'shooting_star': False
+            'shooting_star': False,
+            'Close': 0.0
         }
 
     # 1. Calculate Indicators
@@ -121,7 +123,8 @@ def detect_houyi_shooting_sun(df: pd.DataFrame) -> dict:
         'fib_level': float(fib_level),
         'squeeze_on': squeeze_on,
         'shooting_star': shooting_star,
-        'Signal': str(latest_bar.get('Signal', '觀望'))
+        'Signal': str(latest_bar.get('Signal', '觀望')),
+        'Close': float(latest_bar['Close'])
     }
 
 def detect_whale_trading(df_daily: pd.DataFrame) -> dict:
@@ -145,7 +148,8 @@ def detect_whale_trading(df_daily: pd.DataFrame) -> dict:
             'daily_squeeze': False,
             'weekly_squeeze': False,
             'daily_momentum': 0.0,
-            'weekly_momentum': 0.0
+            'weekly_momentum': 0.0,
+            'Close': 0.0
         }
 
     # 1. Daily indicators
@@ -166,7 +170,8 @@ def detect_whale_trading(df_daily: pd.DataFrame) -> dict:
             'daily_squeeze': bool(latest_daily['Squeeze_On']),
             'weekly_squeeze': False,
             'daily_momentum': float(latest_daily['Momentum']),
-            'weekly_momentum': 0.0
+            'weekly_momentum': 0.0,
+            'Close': float(latest_daily['Close'])
         }
         
     # 3. Weekly indicators
@@ -188,5 +193,6 @@ def detect_whale_trading(df_daily: pd.DataFrame) -> dict:
         'weekly_squeeze': weekly_sq,
         'daily_momentum': daily_mom,
         'weekly_momentum': weekly_mom,
-        'Signal': str(latest_daily.get('Signal', '觀望'))
+        'Signal': str(latest_daily.get('Signal', '觀望')),
+        'Close': float(latest_daily['Close'])
     }

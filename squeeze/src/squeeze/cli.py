@@ -207,22 +207,28 @@ def scan(
     tracking_sells = []
     try:
         tracker = PerformanceTracker(Path("recommendations.csv"))
-        # 1. Update performance for all active tracking items
-        tracker.update_daily_performance()
-        tracking_buys = tracker.get_active_tracking_list(rec_type='buy')
-        tracking_sells = tracker.get_active_tracking_list(rec_type='sell')
         
-        # 2. Record today's recommendations (Top 10 only)
+        # 1. Identify today's recommendations (Top 10 only)
         buy_signals = ["強烈買入 (爆發)", "買入 (動能增強)", "觀察 (跌勢收斂)"]
         sell_signals = ["強烈賣出 (跌破)", "賣出 (動能轉弱)"]
         
         today_buys = [r for r in matched if r.get('Signal') in buy_signals]
         today_sells = [r for r in matched if r.get('Signal') in sell_signals]
         
+        # 2. Record today's picks FIRST
         tracker.record_recommendations(today_buys, rec_type='buy')
         tracker.record_recommendations(today_sells, rec_type='sell')
+        
+        # 3. Update performance for all active items (including today's if they were already there, 
+        #    but tracker.update_daily_performance skips items updated today)
+        tracker.update_daily_performance()
+        
+        # 4. Fetch the full active tracking list for the report
+        tracking_buys = tracker.get_active_tracking_list(rec_type='buy')
+        tracking_sells = tracker.get_active_tracking_list(rec_type='sell')
     except Exception as e:
         console.print(f"[red]Error during performance tracking: {str(e)}[/red]")
+
 
     # Handle Notifications
     if notify:
