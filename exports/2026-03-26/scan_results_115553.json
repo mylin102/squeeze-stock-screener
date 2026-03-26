@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "timestamp": "2026-03-26T11:55:53.211637+08:00",
+    "count": 12
+  },
+  "results": [
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.17500019073486325,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1260.TWO",
+      "name": "富味鄉"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.12166674931844075,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1213.TW",
+      "name": "大飲"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.11666679382324217,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1219.TW",
+      "name": "福壽"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.24999936421712238,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1229.TW",
+      "name": "聯華"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.7583325703938801,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1225.TW",
+      "name": "福懋油"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.3333333333333333,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1232.TW",
+      "name": "大統益"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -2.583333333333333,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-25 00:00:00",
+      "ticker": "1268.TWO",
+      "name": "漢來美食"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.0083328882853189,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1236.TW",
+      "name": "宏亞"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.08333333333333329,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1264.TWO",
+      "name": "德麥"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.4666665395100912,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1240.TWO",
+      "name": "茂生農經"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.4333343505859375,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1301.TW",
+      "name": "台塑"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.3666667938232422,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1307.TW",
+      "name": "三芳"
+    }
+  ]
+}

@@ -1,0 +1,5738 @@
+{
+  "metadata": {
+    "timestamp": "2026-03-26T11:58:39.339980+08:00",
+    "count": 573
+  },
+  "results": [
+    {
+      "is_squeezed": true,
+      "energy_level": 3,
+      "momentum": -0.02500009536743164,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4502.TWO",
+      "name": "健信"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 3,
+      "momentum": -0.46666653951009107,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6595.TWO",
+      "name": "光禹國際"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 2,
+      "momentum": -0.18166669209798175,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4194.TWO",
+      "name": "禾生技"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 2,
+      "momentum": -0.0016665458679199214,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5531.TW",
+      "name": "鄉林"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 2,
+      "momentum": 0.266666571299235,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5859.TWO",
+      "name": "遠壽"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 2,
+      "momentum": -0.4333356221516927,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6738.TWO",
+      "name": "鼎��"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 2,
+      "momentum": -0.366668701171875,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6926.TWO",
+      "name": "聖安生醫"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 2,
+      "momentum": 0.8916667302449544,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6929.TWO",
+      "name": "佑全"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 2,
+      "momentum": 0.17499860127766925,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7737.TWO",
+      "name": "凱鈿"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 2,
+      "momentum": -0.6499996185302734,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7797.TWO",
+      "name": "Q BURGER"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 2,
+      "momentum": 0.049999237060546875,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7806.TWO",
+      "name": "精華生醫"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 2,
+      "momentum": -0.6416670481363932,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7833.TWO",
+      "name": "綠岩能源"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 2,
+      "momentum": -0.2833328247070312,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7865.TWO",
+      "name": "金聯成"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 2,
+      "momentum": 3.083333333333333,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7883.TWO",
+      "name": "饗賓"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 2,
+      "momentum": 0.1333335240681966,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8024.TWO",
+      "name": "佑華"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 2,
+      "momentum": 0.008333365122477211,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8443.TW",
+      "name": "阿瘦"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.17500019073486325,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1260.TWO",
+      "name": "富味鄉"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -1.5894571940046343e-07,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1324.TW",
+      "name": "地球"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.041666666666666664,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1506.TW",
+      "name": "正道"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.36666711171468097,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1528.TW",
+      "name": "恩德"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.10833326975504556,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1742.TWO",
+      "name": "台蠟"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.04166698455810547,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1737.TW",
+      "name": "臺鹽"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.033333301544189446,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1813.TWO",
+      "name": "寶利徠"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.16666650772094727,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2023.TW",
+      "name": "燁輝"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.3166656494140625,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2027.TW",
+      "name": "大成鋼"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -2.833333333333333,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2385.TW",
+      "name": "群光"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 1.4083334604899087,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2740.TWO",
+      "name": "天蔥"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.3249998092651367,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2741.TWO",
+      "name": "老四川"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -1.0666656494140625,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2758.TWO",
+      "name": "路易莎咖啡"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.0666666030883789,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2901.TW",
+      "name": "欣欣"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.4666671752929687,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2926.TWO",
+      "name": "誠品生活"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.1333335240681966,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2940.TWO",
+      "name": "歐都納"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.2833340962727865,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3205.TWO",
+      "name": "佰研"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.10000006357828775,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3252.TWO",
+      "name": "海灣"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.07499949137369791,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3118.TWO",
+      "name": "進階"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.04166666666666667,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3432.TW",
+      "name": "台端"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.28333409627278644,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3473.TWO",
+      "name": "智通聯網"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.016666412353515625,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-25 00:00:00",
+      "ticker": "3454.TW",
+      "name": "晶睿"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 8.416666666666666,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3526.TWO",
+      "name": "凡甲"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.7916673024495442,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4127.TWO",
+      "name": "天良"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.5583333969116211,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4172.TWO",
+      "name": "因華"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -1.4083334604899087,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4178.TWO",
+      "name": "永笙-KY"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.12833356857299805,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-25 00:00:00",
+      "ticker": "4406.TWO",
+      "name": "新昕纖"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.1333335240681966,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4538.TWO",
+      "name": "大詠城"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.04166634877522786,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4558.TWO",
+      "name": "寶緯"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.2149999936421712,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4702.TWO",
+      "name": "中美實"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.31666692097981763,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4907.TWO",
+      "name": "富宇"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.03333314259847005,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4972.TWO",
+      "name": "湯石照明"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.29999796549479163,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4987.TWO",
+      "name": "科誠"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.44166628519694007,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5211.TWO",
+      "name": "蒙恬"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.5583330790201823,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5205.TWO",
+      "name": "中茂"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.5833333333333335,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5236.TWO",
+      "name": "凌陽創新"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.04999955495198567,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5348.TWO",
+      "name": "正能量智能"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.15833330154418945,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5450.TWO",
+      "name": "南良"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.23333295186360675,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5514.TWO",
+      "name": "三豐"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.025000095367431634,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5863.TWO",
+      "name": "瑞興銀"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.09499994913736978,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5907.TW",
+      "name": "大洋-KY"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.36666742960611975,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6023.TWO",
+      "name": "元大期"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.18166653315226236,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6027.TWO",
+      "name": "德信"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.07500012715657552,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6109.TWO",
+      "name": "亞元"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.04999987284342447,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6184.TW",
+      "name": "大豐電"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -1.30181884765625,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6423.TWO",
+      "name": "億而得"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.9026031494140625,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6523.TWO",
+      "name": "達爾膚"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.28333282470703125,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6661.TWO",
+      "name": "威健生技"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.0666672388712565,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6665.TWO",
+      "name": "康聯生醫"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.8916667302449544,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6704.TWO",
+      "name": "國璽幹細胞"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.8083337148030598,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6723.TWO",
+      "name": "傑智環境"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.8333333333333334,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6748.TWO",
+      "name": "亞果生醫"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.9250001907348633,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6787.TWO",
+      "name": "晶瑞光"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.059999942779541016,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6793.TWO",
+      "name": "天力離岸"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.5166668891906738,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6797.TWO",
+      "name": "圓點奈米"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.2749999364217122,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6814.TWO",
+      "name": "路迦生醫"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.48333231608072913,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6846.TWO",
+      "name": "綠茵"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.11666615804036459,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-25 00:00:00",
+      "ticker": "6844.TWO",
+      "name": "諾貝兒"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -1.2833334604899087,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6886.TWO",
+      "name": "遠東生技"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.32499885559082026,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6927.TWO",
+      "name": "聯合聚晶"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.1916666030883789,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6971.TWO",
+      "name": "惠民實業"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.5499998728434244,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6995.TWO",
+      "name": "野獸國"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.29166682561238605,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7551.TWO",
+      "name": "知識科技"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -1.4166666666666665,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7689.TWO",
+      "name": "大鵬科CLMX"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.34166622161865234,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7590.TWO",
+      "name": "怡和國際"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.4750003814697265,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7758.TWO",
+      "name": "睿騰能源"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -6.333333333333334,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8210.TW",
+      "name": "勤誠"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.08333333333333333,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8329.TWO",
+      "name": "台視"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.04166682561238606,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8411.TW",
+      "name": "福貞-KY"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.18499994277954102,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-25 00:00:00",
+      "ticker": "8488.TW",
+      "name": "吉源-KY"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": -0.07499949137369792,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "9925.TW",
+      "name": "新保"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 1,
+      "momentum": 0.04166634877522786,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "9928.TW",
+      "name": "中視"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.12166674931844075,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1213.TW",
+      "name": "大飲"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.7583325703938801,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1225.TW",
+      "name": "福懋油"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.10000006357828775,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1219.TW",
+      "name": "福壽"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.3333333333333333,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1232.TW",
+      "name": "大統益"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.24999936421712238,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1229.TW",
+      "name": "聯華"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.0083328882853189,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1236.TW",
+      "name": "宏亞"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.08333333333333329,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1264.TWO",
+      "name": "德麥"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -2.583333333333333,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-25 00:00:00",
+      "ticker": "1268.TWO",
+      "name": "漢來美食"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.4666665395100912,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1240.TWO",
+      "name": "茂生農經"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.4416675567626953,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1301.TW",
+      "name": "台塑"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.3666667938232422,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1307.TW",
+      "name": "三芳"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.24999999999999997,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1315.TW",
+      "name": "達新"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.04166650772094728,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1313.TW",
+      "name": "聯成"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.625,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1312.TW",
+      "name": "國喬"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.27499961853027344,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1321.TW",
+      "name": "大洋"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.14333327611287433,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1413.TW",
+      "name": "宏洲"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.008333206176757812,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1416.TW",
+      "name": "廣豐"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.4833335876464844,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-25 00:00:00",
+      "ticker": "1418.TW",
+      "name": "東華"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.23333358764648438,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1436.TW",
+      "name": "華友聯"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.06333335240681966,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1441.TW",
+      "name": "大東"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.058333396911621066,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1439.TW",
+      "name": "雋揚"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.42499987284342444,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1451.TW",
+      "name": "年興"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.0666666030883789,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1453.TW",
+      "name": "大將"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.6083329518636067,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-25 00:00:00",
+      "ticker": "1470.TW",
+      "name": "大統新創"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.8416666984558105,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1471.TW",
+      "name": "首利"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.125,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1463.TW",
+      "name": "強盛新"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.150000254313151,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1525.TW",
+      "name": "江申"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.4166663487752278,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1533.TW",
+      "name": "車王電"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.3333333333333333,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1537.TW",
+      "name": "廣隆"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.016667366027832,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1541.TW",
+      "name": "錩泰"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.6666666666666666,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1580.TWO",
+      "name": "新麥"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.1583334604899087,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1570.TWO",
+      "name": "力肯"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 2.4166666666666665,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1595.TWO",
+      "name": "川寶"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": -0.09833335876464844,
+      "fired": true,
+      "Signal": "強烈賣出 (跌破)",
+      "timestamp": "2026-03-25 00:00:00",
+      "ticker": "1594.TWO",
+      "name": "日高"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.9333337148030598,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1717.TW",
+      "name": "長興"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.3999989827473958,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1720.TW",
+      "name": "生達"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.11365254720052081,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1712.TW",
+      "name": "興農"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.9166666666666666,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1722.TW",
+      "name": "台肥"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.3200000921885172,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1718.TW",
+      "name": "中纖"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.1549997329711914,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1714.TW",
+      "name": "和桐"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.5,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1730.TW",
+      "name": "花仙子"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.11666679382324219,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1731.TW",
+      "name": "美吾華"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.46666717529296875,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1734.TW",
+      "name": "杏輝"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.25,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1773.TW",
+      "name": "勝一"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.3333333333333333,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1788.TWO",
+      "name": "杏昌"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.16666698455810547,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1780.TWO",
+      "name": "立弘"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.3500000635782877,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1789.TW",
+      "name": "神隆"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.016667048136393227,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1817.TW",
+      "name": "凱撒衛"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.5333340962727865,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "1815.TWO",
+      "name": "富喬"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.494999885559082,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2017.TW",
+      "name": "官田鋼"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.4754759470621744,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2015.TW",
+      "name": "豐興"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.26666673024495446,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2020.TW",
+      "name": "美亞"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.4916671117146809,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2034.TW",
+      "name": "允強"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 0.7416669527689616,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2038.TW",
+      "name": "海光"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.5833333333333333,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2061.TWO",
+      "name": "風青"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -6.5,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2049.TW",
+      "name": "上銀"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.41666666666666663,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2063.TWO",
+      "name": "世鎧"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.33333333333333326,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2064.TWO",
+      "name": "晉椿"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.0583335558573405,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2104.TW",
+      "name": "國際中橡"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.1333335240681966,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2103.TW",
+      "name": "台橡"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.17500050862630206,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2069.TW",
+      "name": "運錩"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.4249998728434244,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2070.TWO",
+      "name": "精湛"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 0.2425746917724609,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2109.TW",
+      "name": "華豐"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.5666669209798176,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2211.TW",
+      "name": "長榮鋼"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.0394967397054036,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2108.TW",
+      "name": "南帝"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 8.583333333333334,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2233.TW",
+      "name": "宇隆"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.6666669845581054,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2221.TWO",
+      "name": "大甲"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -3.0,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2236.TW",
+      "name": "百達-KY"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.8833335240681965,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2237.TWO",
+      "name": "華德動能"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 2.016666730244954,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2241.TW",
+      "name": "艾姆勒"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.0999997456868489,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2254.TW",
+      "name": "巨鎧精密-創"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 22.083333333333332,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2313.TW",
+      "name": "華通"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.10833311080932616,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2332.TW",
+      "name": "友訊"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.3000011444091797,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2338.TW",
+      "name": "光罩"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 3.3083343505859375,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2355.TW",
+      "name": "敬鵬"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.6749986012776692,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2362.TW",
+      "name": "藍天"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 5.066666920979817,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2367.TW",
+      "name": "燿華"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.25000063578287757,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2364.TW",
+      "name": "倫飛"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.2333335876464844,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2373.TW",
+      "name": "震旦行"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -2.1666666666666665,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2382.TW",
+      "name": "廣達"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -2.5333353678385415,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2377.TW",
+      "name": "微星"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 1.875,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2387.TW",
+      "name": "精元"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": -0.3833333651224772,
+      "fired": true,
+      "Signal": "強烈賣出 (跌破)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2409.TW",
+      "name": "友達"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 3.374999682108561,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2406.TW",
+      "name": "國碩"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.3250001271565754,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2419.TW",
+      "name": "仲琦"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.8999983469645183,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2423.TW",
+      "name": "固緯"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.75,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2412.TW",
+      "name": "中華電"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.5833326975504556,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2417.TW",
+      "name": "圓剛"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.0749998092651367,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2438.TW",
+      "name": "翔耀"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.04166650772094727,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2444.TW",
+      "name": "兆勁"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.3999999364217122,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2434.TW",
+      "name": "統懋"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 3.75,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2467.TW",
+      "name": "志聖"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.6166667938232422,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2477.TW",
+      "name": "美隆電"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.6666666666666665,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2474.TW",
+      "name": "可成"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.0833333333333333,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2480.TW",
+      "name": "敦陽科"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.016667048136393234,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2491.TW",
+      "name": "吉祥全"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.1333335240681966,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2509.TW",
+      "name": "全坤建"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.06333303451538086,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2506.TW",
+      "name": "太設"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.013333320617675781,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2511.TW",
+      "name": "太子"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.7000007629394531,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2496.TW",
+      "name": "卓越"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.891665776570638,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2497.TW",
+      "name": "怡利電"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.12499968210856119,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2537.TW",
+      "name": "聯上發"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.46666590372721356,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2539.TW",
+      "name": "櫻花建"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.9999987284342446,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2535.TW",
+      "name": "達欣工"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.35000038146972656,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2540.TW",
+      "name": "愛山林"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.116667111714681,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2534.TW",
+      "name": "宏盛"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.31666628519694007,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2545.TW",
+      "name": "皇翔"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -2.0,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2603.TW",
+      "name": "長榮"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": -0.28333361943562824,
+      "fired": true,
+      "Signal": "強烈賣出 (跌破)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2547.TW",
+      "name": "日勝生"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -4.833330790201822,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2615.TW",
+      "name": "萬海"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.659004211425781,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2613.TW",
+      "name": "中櫃"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.775000254313151,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2617.TW",
+      "name": "台航"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.20833333333333331,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2614.TW",
+      "name": "東森"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.23333326975504556,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2611.TW",
+      "name": "志信"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 6.25,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2729.TWO",
+      "name": "瓦城"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.6749998728434244,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2724.TWO",
+      "name": "藝舍-KY"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.08333333333333333,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2733.TWO",
+      "name": "維格餅家"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.9083328247070311,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2739.TW",
+      "name": "寒舍"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.5333334604899088,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2761.TWO",
+      "name": "橘焱胡同"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.8999999364217122,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2816.TW",
+      "name": "旺旺保"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 0.5583330790201821,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2838.TW",
+      "name": "聯邦銀"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.4166666666666665,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2850.TW",
+      "name": "新產"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.1416660944620768,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2887.TW",
+      "name": "台新新光金"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.024998982747395843,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2890.TW",
+      "name": "永豐金"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.1466665267944336,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2897.TW",
+      "name": "王道銀行"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -4.25,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2912.TW",
+      "name": "統一超"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.04333329200744629,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "2911.TW",
+      "name": "麗嬰房"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.14166704813639325,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-25 00:00:00",
+      "ticker": "2948.TWO",
+      "name": "寶陞"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.5,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3014.TW",
+      "name": "聯陽"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.8166656494140625,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3003.TW",
+      "name": "健和興"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.3749998410542806,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3011.TW",
+      "name": "今皓"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.14999977747599283,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3024.TW",
+      "name": "憶聲"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 9.666666666666666,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3030.TW",
+      "name": "德律"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 2.291667302449544,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3028.TW",
+      "name": "增你強"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.6166661580403645,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3042.TW",
+      "name": "晶技"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.8333333333333333,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3034.TW",
+      "name": "聯詠"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -7.75,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3044.TW",
+      "name": "健鼎"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.6083332697550455,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3041.TW",
+      "name": "揚智"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.7333332697550454,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3043.TW",
+      "name": "科風"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.1500008900960286,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3078.TWO",
+      "name": "僑威"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.2749999364217122,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3073.TWO",
+      "name": "天方能源"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 120.83333333333331,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3081.TWO",
+      "name": "聯亞"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 1.2999995549519856,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3097.TWO",
+      "name": "拍檔"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.6416667302449544,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-25 00:00:00",
+      "ticker": "3095.TWO",
+      "name": "及成"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.4999999999999998,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3122.TWO",
+      "name": "笙泉"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.6200000445048014,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3117.TWO",
+      "name": "年程"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.23333295186360678,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3162.TWO",
+      "name": "精確"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.75,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3130.TW",
+      "name": "一零四"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.3166666030883789,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3164.TW",
+      "name": "景岳"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.10833358764648435,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3168.TW",
+      "name": "眾福科"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.1333325703938801,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3169.TWO",
+      "name": "亞信"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.23333358764648438,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3213.TWO",
+      "name": "茂訊"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 2.916666666666666,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3217.TWO",
+      "name": "優群"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 1.4833335876464844,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3206.TWO",
+      "name": "志豐"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 1.9833332697550454,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3184.TWO",
+      "name": "微邦"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 19.75,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3211.TWO",
+      "name": "順達"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.5833333333333333,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3231.TW",
+      "name": "緯創"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.1916656494140625,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3230.TWO",
+      "name": "錦明"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 4.833333333333333,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3265.TWO",
+      "name": "台星科"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.17499987284342447,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3284.TWO",
+      "name": "太普高"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.3166669209798177,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3287.TWO",
+      "name": "廣寰科"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.14166657129923502,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3268.TWO",
+      "name": "海德威"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.008333047231038407,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3276.TWO",
+      "name": "宇環"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.4333337148030599,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3303.TWO",
+      "name": "岱稜"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.5666672388712566,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3311.TW",
+      "name": "閎暉"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.4666659037272134,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3310.TWO",
+      "name": "佳穎"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.5333340962727864,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3232.TWO",
+      "name": "昱捷"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.34166717529296875,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3354.TWO",
+      "name": "律勝"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.1916669209798176,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3380.TW",
+      "name": "明泰"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 7.083333333333332,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3416.TW",
+      "name": "融程電"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.28333282470703125,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3379.TWO",
+      "name": "彬台"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.53333314259847,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3419.TW",
+      "name": "譁裕"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 6.416666666666667,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3413.TW",
+      "name": "京鼎"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": -0.23333358764648435,
+      "fired": true,
+      "Signal": "強烈賣出 (跌破)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3447.TW",
+      "name": "展達"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.6833330790201821,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3465.TWO",
+      "name": "進泰電子"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.16666603088378906,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3373.TWO",
+      "name": "熱映"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.616668701171875,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3479.TWO",
+      "name": "安勤"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.3916664123535156,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3490.TWO",
+      "name": "單井"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.3166662851969401,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3466.TWO",
+      "name": "德晉"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.228333314259847,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3494.TW",
+      "name": "誠研"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.5250000953674316,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3520.TWO",
+      "name": "華盈"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": -0.17500050862630206,
+      "fired": true,
+      "Signal": "強烈賣出 (跌破)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3516.TWO",
+      "name": "亞帝歐"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.6833318074544272,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3548.TWO",
+      "name": "兆利"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 2.1083335876464844,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3543.TW",
+      "name": "州巧"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -2.9999999999999996,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3551.TWO",
+      "name": "世禾"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.400000254313151,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3588.TW",
+      "name": "通嘉"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.3000005086263021,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3594.TWO",
+      "name": "磐儀"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 0.5700000921885172,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3603.TWO",
+      "name": "建祥國際"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 1.4833316802978516,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3628.TWO",
+      "name": "盈正"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.3000001907348633,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3646.TWO",
+      "name": "艾恩特"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 3.366664886474609,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3633.TWO",
+      "name": "云光"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 5.83333333333333,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3661.TW",
+      "name": "世芯-KY"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.45000012715657545,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3672.TWO",
+      "name": "康聯訊"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.8916664123535156,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3669.TW",
+      "name": "圓展"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 14.583333333333334,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3680.TWO",
+      "name": "家登"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.833333333333333,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3679.TW",
+      "name": "新至陞"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -4.833333333333333,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3691.TWO",
+      "name": "碩禾"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.6666666666666665,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3708.TW",
+      "name": "上緯投控"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.7500025431315103,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "3709.TWO",
+      "name": "鑫聯大投控"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.2666664123535156,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4106.TW",
+      "name": "雃博"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.3833351135253906,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4126.TWO",
+      "name": "太醫"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.06166656812032064,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4115.TWO",
+      "name": "善德生技"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.5499998728434243,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4131.TWO",
+      "name": "浩泰"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 0.5583333969116211,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4142.TW",
+      "name": "國光生"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -2.09999942779541,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4130.TWO",
+      "name": "健亞"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.7550150553385415,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4163.TWO",
+      "name": "鐿鈦"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.30833307902018225,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4174.TWO",
+      "name": "浩鼎"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.4416669209798177,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4164.TW",
+      "name": "承業醫"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.1916667620340983,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4186.TWO",
+      "name": "尖端醫"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.441666603088379,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4195.TWO",
+      "name": "基米"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.12166722615559895,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4197.TWO",
+      "name": "暐世"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -2.2416667938232417,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4198.TWO",
+      "name": "欣大健康"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": -0.48333326975504554,
+      "fired": true,
+      "Signal": "強烈賣出 (跌破)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4207.TWO",
+      "name": "環泰"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.2999998728434245,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-25 00:00:00",
+      "ticker": "4305.TWO",
+      "name": "世坤"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": -0.17500019073486325,
+      "fired": true,
+      "Signal": "強烈賣出 (跌破)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4413.TWO",
+      "name": "飛寶企業"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.05833323796590169,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4306.TW",
+      "name": "炎洲"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.16666666666666666,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4431.TWO",
+      "name": "敏成健康"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.033332983652750656,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4432.TWO",
+      "name": "銘旺實"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.5833333333333333,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4506.TWO",
+      "name": "崇友"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.03000009059906005,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-25 00:00:00",
+      "ticker": "4529.TWO",
+      "name": "淳紳"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.2999992370605469,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4527.TWO",
+      "name": "方土霖"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.8333333333333333,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4533.TWO",
+      "name": "協易機"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.1166667938232422,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4534.TWO",
+      "name": "慶騰"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 0.43333276112874347,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4544.TWO",
+      "name": "春日"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.29166698455810547,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4564.TW",
+      "name": "元翎"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.5166664123535156,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4560.TW",
+      "name": "強信-KY"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 5.916666666666666,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4576.TW",
+      "name": "大銀微系統"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 8.200002034505207,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4577.TWO",
+      "name": "達航科技"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.8500010172526041,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4565.TWO",
+      "name": "宏偉"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.5,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4580.TWO",
+      "name": "捷流閥業"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.14999993642171225,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4716.TWO",
+      "name": "大立"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.0416666666666665,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4726.TWO",
+      "name": "永昕"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.833333333333333,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4736.TW",
+      "name": "泰博"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.1833337148030599,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4732.TWO",
+      "name": "彥臣"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.4583336512247721,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4767.TWO",
+      "name": "誠泰科技"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 5.833333333333334,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4755.TW",
+      "name": "三福化"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.525000254313151,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4754.TWO",
+      "name": "國碳科"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -54.5,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4749.TWO",
+      "name": "新應材"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.3499984741210938,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4904.TW",
+      "name": "遠傳"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.16666698455810547,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4924.TWO",
+      "name": "欣厚-KY"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 2.083333333333333,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4916.TW",
+      "name": "事欣科"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.17499923706054688,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4942.TW",
+      "name": "嘉彰"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.766666571299235,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4943.TW",
+      "name": "康控-KY"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.4083334604899088,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4934.TW",
+      "name": "太極"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.5083338419596355,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4927.TW",
+      "name": "泰鼎-KY"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.5166651407877605,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4951.TWO",
+      "name": "精拓科"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -2.5,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4961.TW",
+      "name": "天鈺"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.81666628519694,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4980.TWO",
+      "name": "佐臻"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 24.666666666666664,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4971.TWO",
+      "name": "IET-KY"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.1333332061767578,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4976.TW",
+      "name": "佳凌"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 3.666665395100911,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4989.TW",
+      "name": "榮科"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.21666590372721353,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5201.TWO",
+      "name": "凱衛"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 0.29166666666666663,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "4995.TWO",
+      "name": "晶達"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.08333333333333333,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5014.TWO",
+      "name": "建錩"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.8833335240681965,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5210.TWO",
+      "name": "寶碩"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.4166666666666667,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5209.TWO",
+      "name": "新鼎"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -3.75,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5222.TW",
+      "name": "全訊"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.2000001271565755,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5220.TWO",
+      "name": "萬達光電"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.05000019073486328,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5272.TWO",
+      "name": "笙科"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 17.5,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5284.TW",
+      "name": "jpp-KY"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": -2.9666659037272134,
+      "fired": true,
+      "Signal": "強烈賣出 (跌破)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5263.TWO",
+      "name": "智崴"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.14166577657063803,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5254.TWO",
+      "name": "欣訊科技"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.25,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5288.TW",
+      "name": "豐祥-KY"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.9999999999999999,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5312.TWO",
+      "name": "寶島科"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.058333396911621094,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5302.TWO",
+      "name": "太欣"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": -0.10000038146972656,
+      "fired": true,
+      "Signal": "強烈賣出 (跌破)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5328.TWO",
+      "name": "華容"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.5083335240681967,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5344.TWO",
+      "name": "立衛"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -3.2166671752929688,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5340.TWO",
+      "name": "建榮"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.11666679382324219,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5356.TWO",
+      "name": "協益"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": -0.7725880940755208,
+      "fired": true,
+      "Signal": "強烈賣出 (跌破)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5403.TWO",
+      "name": "中菲"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.2566666603088379,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5355.TWO",
+      "name": "佳總"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 2.3166675567626953,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5425.TWO",
+      "name": "台半"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 3.2499999999999996,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5434.TW",
+      "name": "崇越"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 3.9499998092651367,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5452.TWO",
+      "name": "佶優"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.4583333333333333,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5471.TW",
+      "name": "松翰"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 18.833333333333332,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5475.TWO",
+      "name": "德宏"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.8916667302449545,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5464.TWO",
+      "name": "霖宏"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 6.357828775671592e-07,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5481.TWO",
+      "name": "新華"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.04166666666666667,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5489.TWO",
+      "name": "彩富"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.5000006357828775,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5498.TWO",
+      "name": "凱崴"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.4833329518636068,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5508.TWO",
+      "name": "永信建"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.013333400090535479,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5512.TWO",
+      "name": "力麒"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.09999990463256836,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5533.TW",
+      "name": "皇鼎"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 1.8333346048990884,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5534.TW",
+      "name": "長虹"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 2.016666730244954,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5543.TWO",
+      "name": "桓鼎-KY"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.525000254313151,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5603.TWO",
+      "name": "陸海"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.14166641235351562,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5878.TWO",
+      "name": "台名"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.49166615804036456,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5876.TW",
+      "name": "上海商銀"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 17.583333333333332,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5904.TWO",
+      "name": "寶雅"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.2833334604899088,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5902.TWO",
+      "name": "德記"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.08333333333333334,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "5704.TWO",
+      "name": "老爺知"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.6916662851969401,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6101.TWO",
+      "name": "寬魚國際"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.4083321889241536,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6111.TWO",
+      "name": "光聚晶電"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.24166679382324216,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6114.TWO",
+      "name": "久威"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.09999910990397126,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6035.TWO",
+      "name": "悠遊卡"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.23333295186360675,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6122.TWO",
+      "name": "擎邦"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.5583332379659016,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6120.TW",
+      "name": "達運"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.058333079020182296,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6118.TWO",
+      "name": "建達"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.018333276112874344,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6116.TW",
+      "name": "彩晶"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.4150001207987467,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6142.TW",
+      "name": "友勁"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.8416665395100908,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6133.TW",
+      "name": "金橋"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.341666539510091,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6134.TWO",
+      "name": "萬旭"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 2.6666666666666665,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6146.TWO",
+      "name": "耕興"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.29166634877522785,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6144.TWO",
+      "name": "得利影"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.32499996821085614,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6160.TWO",
+      "name": "欣技"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.07499996821085611,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6154.TWO",
+      "name": "順發"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.6249996821085612,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6152.TW",
+      "name": "百一"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.1416667302449544,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6171.TWO",
+      "name": "大城地產"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.7833334604899088,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6166.TW",
+      "name": "凌華"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.04166634877522786,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6169.TWO",
+      "name": "昱泉"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.8333346048990884,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6183.TW",
+      "name": "關貿"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.6000003814697266,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6179.TWO",
+      "name": "亞通"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 10.249999999999998,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6196.TW",
+      "name": "帆宣"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 5.808333079020182,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6205.TW",
+      "name": "詮欣"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.41666666666666663,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6214.TW",
+      "name": "精誠"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.7333335876464842,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6207.TWO",
+      "name": "雷科"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.44166628519694007,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6228.TWO",
+      "name": "全譜"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -8.166666666666666,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6230.TW",
+      "name": "尼得科超眾"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 4.816666920979817,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6227.TWO",
+      "name": "茂綸"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 1.716666539510091,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6233.TWO",
+      "name": "旺玖"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.27499961853027344,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6242.TWO",
+      "name": "立康"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -2.25,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6244.TWO",
+      "name": "茂迪"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.05833339691162108,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6259.TWO",
+      "name": "百徽"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.5833333333333333,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6263.TWO",
+      "name": "普萊德"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.21666622161865234,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6266.TWO",
+      "name": "泰詠"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 1.6166661580403643,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6277.TW",
+      "name": "宏正"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.9127286275227864,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6281.TW",
+      "name": "全國電"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 3.333333333333333,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6279.TWO",
+      "name": "胡連"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.44999949137369794,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6278.TW",
+      "name": "台表科"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.0,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6290.TWO",
+      "name": "良維"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -2.7755575615628914e-17,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6417.TWO",
+      "name": "韋僑"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.4666671752929688,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6416.TW",
+      "name": "瑞祺電通"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -2.0499998728434243,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6443.TW",
+      "name": "元晶"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 5.5,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6467.TWO",
+      "name": "泰合"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": -1.083333969116211,
+      "fired": true,
+      "Signal": "強烈賣出 (跌破)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6477.TW",
+      "name": "安集"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.4666684468587239,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6486.TWO",
+      "name": "互動"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 5.833333333333332,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6488.TWO",
+      "name": "環球晶"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.1333335240681966,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6496.TWO",
+      "name": "科懋"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -2.083333333333333,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6491.TW",
+      "name": "晶碩"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 2.4249998728434243,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6494.TWO",
+      "name": "九齊"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.6833324432373047,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6516.TWO",
+      "name": "勤崴國際"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.15000025431315103,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6517.TWO",
+      "name": "保勝光學"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -14.5,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6526.TW",
+      "name": "達發"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.7645130157470703,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6548.TWO",
+      "name": "長科*"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.29833324750264484,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6549.TWO",
+      "name": "景凱"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -5.333333333333334,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6561.TWO",
+      "name": "是方"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.18333307902018223,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6556.TWO",
+      "name": "勝品"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.15833314259847003,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6564.TWO",
+      "name": "安特羅"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.12499984105428058,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6573.TW",
+      "name": "虹揚-KY"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.08333365122477213,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6578.TWO",
+      "name": "達邦蛋白"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.34166653951009107,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6570.TWO",
+      "name": "維田"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.17499971389770505,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6583.TWO",
+      "name": "友松"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 2.6166648864746094,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6577.TWO",
+      "name": "勁豐"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.5249999364217122,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6586.TWO",
+      "name": "醣基"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.0833333333333333,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6581.TW",
+      "name": "鋼聯"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": -3.783795674641927,
+      "fired": true,
+      "Signal": "強烈賣出 (跌破)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6596.TWO",
+      "name": "寬宏藝術"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.11666679382324217,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6598.TW",
+      "name": "ABC-KY"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 2.166666666666667,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6605.TW",
+      "name": "帝寶"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.006666819254557293,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6616.TWO",
+      "name": "特昇-KY"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.14166768391927081,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6615.TWO",
+      "name": "慧智"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.0833333333333333,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6629.TWO",
+      "name": "泰金-KY"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.8916667302449544,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6618.TWO",
+      "name": "永虹先進"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 31.08333333333333,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6643.TWO",
+      "name": "M31"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 1.0416666666666665,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6649.TWO",
+      "name": "台生材"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.8416665395100911,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6662.TWO",
+      "name": "樂斯科"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.3166669209798176,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6654.TWO",
+      "name": "天正國際"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -2.25,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-25 00:00:00",
+      "ticker": "6655.TW",
+      "name": "科定"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 4.75,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6690.TWO",
+      "name": "安�硌穈T"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.5249996185302734,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6682.TWO",
+      "name": "華旭先進"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.4166666666666667,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6692.TWO",
+      "name": "進能服"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.06666692097981773,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6684.TWO",
+      "name": "安格"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 2.1666666666666674,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6706.TW",
+      "name": "惠特"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.6083342234293618,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6697.TWO",
+      "name": "東捷資訊"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.48554229736328125,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6720.TWO",
+      "name": "久昌"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.2000001271565755,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6722.TW",
+      "name": "輝創"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.49166615804036456,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6730.TWO",
+      "name": "常廣"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.9500001271565754,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6741.TWO",
+      "name": "91APP*-KY"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.7833321889241536,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6742.TW",
+      "name": "澤米"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 1.6999994913736978,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6754.TW",
+      "name": "匯僑設計"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 2.1166674296061196,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6750.TWO",
+      "name": "泰創工程"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.5833333333333333,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6771.TW",
+      "name": "平和環保-創"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.25,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6790.TW",
+      "name": "永豐實"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -9.25,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6789.TW",
+      "name": "采鈺"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.30833307902018225,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6804.TWO",
+      "name": "明係"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.675000508626302,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6798.TWO",
+      "name": "展逸"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 190.83333333333331,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6805.TW",
+      "name": "富世達"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -2.216666539510091,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6806.TW",
+      "name": "森崴能源"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.5083344777425127,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6816.TWO",
+      "name": "捷智商訊"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 4.724999109903971,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6812.TWO",
+      "name": "梭特"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 3.9166666666666665,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6829.TWO",
+      "name": "千附精密"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -2.5666656494140625,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6847.TWO",
+      "name": "普瑞博"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.02499961853027341,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6843.TWO",
+      "name": "進典"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 12.166666666666666,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6854.TW",
+      "name": "錼創科技-KY創"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.17101287841796875,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6865.TWO",
+      "name": "偉康科技"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.14166704813639325,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6875.TWO",
+      "name": "國邑*"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.8666667938232422,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6891.TWO",
+      "name": "樂迦再生"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.5583333969116211,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6892.TWO",
+      "name": "台寶生醫"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 23.833333333333332,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6903.TWO",
+      "name": "巨漢"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.75,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6898.TWO",
+      "name": "程曦資訊"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.31666564941406244,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6902.TW",
+      "name": "GOGOLOOK"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.3333333333333333,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-25 00:00:00",
+      "ticker": "6904.TWO",
+      "name": "伯鑫"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.03333346048990886,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6899.TWO",
+      "name": "創為精密"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.09166685740152991,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6916.TW",
+      "name": "華凌"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.2166662216186523,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6912.TWO",
+      "name": "益鈞環科*"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 4.76666514078776,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6925.TWO",
+      "name": "意藍"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.2816666762034098,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6932.TWO",
+      "name": "水星生醫*"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 0.1333335240681966,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6935.TWO",
+      "name": "王子製藥"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.3833338419596354,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6938.TWO",
+      "name": "藍新資訊"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.2567418416341145,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6955.TW",
+      "name": "邦睿生技-創"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.4249998728434245,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6968.TWO",
+      "name": "萬達寵物"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.08333365122477213,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6987.TWO",
+      "name": "寶晶能源*"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.9166666666666665,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "6996.TWO",
+      "name": "力領科技"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 2.0166664123535156,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7530.TWO",
+      "name": "鋒魁科技"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.4999999999999998,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7556.TWO",
+      "name": "意德士"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 3.0,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7631.TW",
+      "name": "聚賢研發-創"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.675000508626302,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7704.TWO",
+      "name": "明遠精密"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": -0.416666825612386,
+      "fired": true,
+      "Signal": "強烈賣出 (跌破)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7566.TWO",
+      "name": "亞果遊艇"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.03333314259847005,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7716.TWO",
+      "name": "昱臺國際"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.2833332220713297,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7731.TWO",
+      "name": "火星生技*"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 151.66666666666669,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7734.TWO",
+      "name": "印能科技"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 15.333333333333334,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7744.TWO",
+      "name": "崴寶"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.6416670481363932,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7748.TWO",
+      "name": "鑫囍創業"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.25,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7747.TWO",
+      "name": "昕奇雲端"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -2.0833333333333335,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7740.TW",
+      "name": "熙特爾-創"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 52.49999999999999,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7750.TW",
+      "name": "新代"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.14166641235351557,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7760.TWO",
+      "name": "享溫馨"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.8499991099039713,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7756.TWO",
+      "name": "多那之"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": -2.6250006357828775,
+      "fired": true,
+      "Signal": "強烈賣出 (跌破)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7761.TWO",
+      "name": "三大未來"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -5.25,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7763.TWO",
+      "name": "崇舜"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.8083327611287434,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7776.TWO",
+      "name": "奧孟亞"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.6916662851969401,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7770.TWO",
+      "name": "君曜"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 16.0,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7795.TW",
+      "name": "長廣"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 3.6833343505859375,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7813.TWO",
+      "name": "宇辰系統"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.29166603088378906,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7840.TWO",
+      "name": "祥圃"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.3333333333333333,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7837.TWO",
+      "name": "啟新生"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.7166671752929685,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7855.TWO",
+      "name": "和運租車"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.433331807454427,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7857.TWO",
+      "name": "合水先進"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -5.666665395100911,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7871.TWO",
+      "name": "安立璽榮-KY"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.5166676839192709,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7867.TWO",
+      "name": "特力屋"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": -13.5,
+      "fired": true,
+      "Signal": "強烈賣出 (跌破)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7875.TWO",
+      "name": "安圖斯"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 17.25,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7880.TWO",
+      "name": "聖凰"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.43333307902018237,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7881.TWO",
+      "name": "科明"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 2.25,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7878.TWO",
+      "name": "藥祇"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -2.5916659037272134,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "7902.TWO",
+      "name": "宇越生醫*"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.10833326975504556,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8011.TW",
+      "name": "台通"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 19.25,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8021.TW",
+      "name": "尖點"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -4.116666793823242,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8048.TWO",
+      "name": "德勝"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.40000025431315095,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8040.TWO",
+      "name": "九暘"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.008333841959635421,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8050.TWO",
+      "name": "廣積"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.03333314259847005,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-25 00:00:00",
+      "ticker": "8067.TWO",
+      "name": "志旭"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.0333334604899087,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8068.TWO",
+      "name": "全達"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.9166666666666665,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8081.TW",
+      "name": "致新"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.8416671752929686,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8080.TWO",
+      "name": "泰霖"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.21666638056437174,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8071.TWO",
+      "name": "能率網通"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.5833333333333331,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8086.TWO",
+      "name": "宏捷科"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.583333969116211,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8087.TWO",
+      "name": "麗升能源"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.1333332061767578,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8099.TWO",
+      "name": "大世科"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.4000008900960286,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8131.TW",
+      "name": "福懋科"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 6.166666666666666,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8114.TW",
+      "name": "振樺電"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.7833328247070312,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8272.TWO",
+      "name": "全景軟體"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": -0.0833346048990885,
+      "fired": true,
+      "Signal": "強烈賣出 (跌破)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8367.TW",
+      "name": "建新國際"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.09999990463256836,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8354.TWO",
+      "name": "冠好"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.08333333333333337,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8416.TWO",
+      "name": "實威"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.3249994913736979,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8415.TWO",
+      "name": "大國鋼"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.10000038146972656,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-25 00:00:00",
+      "ticker": "8409.TWO",
+      "name": "商之器"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": 0.14166704813639325,
+      "fired": true,
+      "Signal": "強烈買入 (爆發)",
+      "timestamp": "2026-03-25 00:00:00",
+      "ticker": "8423.TWO",
+      "name": "保綠-KY"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.41666666666666663,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8421.TWO",
+      "name": "旭源"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.5666662851969401,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-25 00:00:00",
+      "ticker": "8410.TWO",
+      "name": "森田"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 1.7000020345052085,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8431.TWO",
+      "name": "匯鑽科"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -3.416666666666666,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8438.TW",
+      "name": "昶昕"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.925000508626302,
+      "fired": false,
+      "Signal": "賣出 (動能轉弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8455.TWO",
+      "name": "大拓-KY"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.8250001271565754,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8476.TW",
+      "name": "台境*"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.1999988555908203,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8481.TW",
+      "name": "政伸"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -1.2333335876464844,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8927.TWO",
+      "name": "北基"
+    },
+    {
+      "is_squeezed": false,
+      "energy_level": 0,
+      "momentum": -1.450002034505208,
+      "fired": true,
+      "Signal": "強烈賣出 (跌破)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8924.TWO",
+      "name": "大田"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.29166666666666663,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8916.TWO",
+      "name": "光隆"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.30833307902018225,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8926.TW",
+      "name": "台汽電"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.49166615804036456,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8941.TWO",
+      "name": "關中"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.583333333333333,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8937.TWO",
+      "name": "合騏"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.1099999745686849,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "8933.TWO",
+      "name": "愛地雅"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.09166653951009107,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "9906.TW",
+      "name": "欣巴巴"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.07500000794728597,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "9110.TW",
+      "name": "越南控-DR"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": -0.23333326975504556,
+      "fired": false,
+      "Signal": "觀察 (跌勢收斂)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "9944.TW",
+      "name": "新麗"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.03333346048990886,
+      "fired": false,
+      "Signal": "觀望 (動能減弱)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "9950.TWO",
+      "name": "萬國通"
+    },
+    {
+      "is_squeezed": true,
+      "energy_level": 0,
+      "momentum": 0.16499996185302734,
+      "fired": false,
+      "Signal": "買入 (動能增強)",
+      "timestamp": "2026-03-26 00:00:00",
+      "ticker": "9957.TWO",
+      "name": "燁聯"
+    }
+  ]
+}
