@@ -3,11 +3,8 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "squeeze"
-version = "1.0.0"
-authors = [
-  { name = "GSD Executor" },
-]
+name = "squeeze-tw"
+version = "1.1.0"
 description = "Taiwan stock screener based on Squeeze Momentum logic"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -27,14 +24,8 @@ dependencies = [
     "html5lib",
 ]
 
-[project.optional-dependencies]
-dev = [
-    "pytest",
-    "ruff",
-]
-
 [project.scripts]
-squeeze = "squeeze.cli:app"
+squeeze-tw = "squeeze.cli:app"
 
 [tool.setuptools]
 include-package-data = true
@@ -45,7 +36,3 @@ include = ["squeeze*"]
 
 [tool.setuptools.package-data]
 "squeeze.report.templates" = ["*.j2"]
-
-[tool.ruff]
-line-length = 88
-target-version = "py39"
