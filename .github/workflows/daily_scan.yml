@@ -2,7 +2,6 @@ name: Daily Stock Scan
 
 on:
   schedule:
-    # 07:30 UTC is 15:30 Taiwan Time (TST)
     - cron: '30 7 * * 1-5'
   workflow_dispatch:
 
@@ -34,7 +33,7 @@ jobs:
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           SMTP_RECIPIENT: ${{ secrets.SMTP_RECIPIENT }}
         run: |
-          python -m squeeze scan --export --plot --notify
+          squeeze scan --export --plot --notify
 
       - name: Commit and push results
         uses: stefanzweifel/git-auto-commit-action@v5
