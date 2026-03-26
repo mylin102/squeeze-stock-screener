@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install ./squeeze
+          pip install .
 
       - name: Run Squeeze Scan
         env:
@@ -34,10 +34,10 @@ jobs:
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           SMTP_RECIPIENT: ${{ secrets.SMTP_RECIPIENT }}
         run: |
-          python -m squeeze scan --export --plot --notify --output-dir squeeze/exports
+          python -m squeeze scan --export --plot --notify
 
       - name: Commit and push results
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: auto-update scan results and performance tracker [skip ci]"
-          file_pattern: "squeeze/exports/* squeeze/recommendations.csv"
+          file_pattern: "exports/* recommendations.csv"
