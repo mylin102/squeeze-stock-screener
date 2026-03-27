@@ -16,6 +16,23 @@ app = typer.Typer(help="Squeeze TW Screener for Taiwan Market")
 console = Console()
 
 
+def _normalize_tw_ticker(raw_ticker: str, ticker_map: dict[str, str]) -> str:
+    ticker = raw_ticker.strip().upper()
+    if ticker in ticker_map:
+        return ticker
+
+    if "." in ticker:
+        return ticker
+
+    if ticker.isdigit():
+        for suffix in (".TW", ".TWO"):
+            candidate = f"{ticker}{suffix}"
+            if candidate in ticker_map:
+                return candidate
+
+    return ticker
+
+
 @app.command(name="analyze-tracking")
 def analyze_tracking(
     csv_path: Path = typer.Option(Path("recommendations.csv"), "--csv", help="Tracking CSV to analyze."),
@@ -42,13 +59,13 @@ def analyze(
         "whale": ("Whale Trading", detect_whale_trading),
     }
 
-    normalized_ticker = ticker.strip().upper()
     if pattern not in pattern_map:
         console.print(f"[red]Unknown pattern: {pattern}.[/red]")
         raise typer.Exit(code=1)
 
     pattern_title, pattern_fn = pattern_map[pattern]
     ticker_map = fetch_tickers_with_names()
+    normalized_ticker = _normalize_tw_ticker(ticker, ticker_map)
     scanner = MarketScanner([normalized_ticker], ticker_names=ticker_map)
 
     with console.status(f"[bold green]Downloading market data for {normalized_ticker}...[/bold green]"):
@@ -128,6 +145,42 @@ def analyze(
         table.add_row(field, value)
 
     console.print(table)
+
+
+@app.command(name="plot")
+def plot(
+    ticker: str = typer.Option(..., "--ticker", help="Single Taiwan ticker to plot."),
+    period: str = typer.Option("2y", "--period", "-p", help="Data period (e.g., 2y, 1y, 6mo)"),
+    output: Optional[Path] = typer.Option(None, "--output", "-o", help="Output PNG path."),
+):
+    """Generate a chart for a single Taiwan ticker."""
+    from squeeze.engine.scanner import MarketScanner
+    from squeeze.report.visualizer import plot_ticker
+
+    ticker_map = fetch_tickers_with_names()
+    normalized_ticker = _normalize_tw_ticker(ticker, ticker_map)
+    scanner = MarketScanner([normalized_ticker], ticker_names=ticker_map)
+
+    with console.status(f"[bold green]Downloading market data for {normalized_ticker}...[/bold green]"):
+        scanner.fetch_data(period=period)
+
+    if scanner.data.empty:
+        console.print(f"[red]No market data available for {normalized_ticker}.[/red]")
+        raise typer.Exit(code=1)
+
+    if isinstance(scanner.data.columns, pd.MultiIndex):
+        ticker_df = scanner.data[normalized_ticker].dropna(subset=["Close"])
+    else:
+        ticker_df = scanner.data.dropna(subset=["Close"])
+
+    if ticker_df.empty:
+        console.print(f"[red]No plottable data available for {normalized_ticker}.[/red]")
+        raise typer.Exit(code=1)
+
+    safe_name = normalized_ticker.replace(".", "_")
+    chart_path = output or Path("exports") / "single" / f"{safe_name}.png"
+    plot_ticker(ticker_df, normalized_ticker, str(chart_path))
+    console.print(f"[green]Saved chart:[/green] {chart_path}")
 
 @app.command(name="scan")
 def scan(
