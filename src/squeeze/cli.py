@@ -230,7 +230,10 @@ def scan(
     min_volume: Optional[float] = typer.Option(None, "--min-volume", help="Minimum average daily volume"),
     min_score: Optional[float] = typer.Option(None, "--min-score", help="Minimum Value Score (0.0 - 1.0)"),
     min_price: Optional[float] = typer.Option(None, "--min-price", help="Minimum stock price (TWD)"),
-    max_price: Optional[float] = typer.Option(None, "--max-price", help="Maximum stock price (TWD)")
+    max_price: Optional[float] = typer.Option(None, "--max-price", help="Maximum stock price (TWD)"),
+    tracking_stop_loss_pct: Optional[float] = typer.Option(None, "--tracking-stop-loss-pct", help="Attach a fixed stop-loss alert percentage to tracked buy positions."),
+    tracking_stop_loss_ma_window: Optional[int] = typer.Option(None, "--tracking-stop-loss-ma-window", help="Attach a moving-average stop-loss alert window to tracked buy positions."),
+    tracking_stop_loss_ticks: int = typer.Option(0, "--tracking-stop-loss-ticks", help="Attach a tick offset below the moving average for tracked buy stop-loss alerts."),
 ):
     """
     Scan all Taiwan stocks for specific technical patterns and fundamental filters.
@@ -379,7 +382,14 @@ def scan(
         
         market_context = tracker._infer_market_context()
         market_context['pattern'] = pattern
-        tracker.record_recommendations(today_buys, rec_type='buy', market_context=market_context)
+        tracker.record_recommendations(
+            today_buys,
+            rec_type='buy',
+            market_context=market_context,
+            stop_loss_pct=tracking_stop_loss_pct,
+            stop_loss_ma_window=tracking_stop_loss_ma_window,
+            stop_loss_ticks=tracking_stop_loss_ticks,
+        )
         tracker.record_recommendations(today_sells, rec_type='sell', market_context=market_context)
     except Exception as e:
         console.print(f"[red]Error during tracking: {str(e)}[/red]")
