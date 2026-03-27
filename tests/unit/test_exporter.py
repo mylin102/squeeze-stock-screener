@@ -99,9 +99,8 @@ def test_to_markdown(exporter, mock_results, tmp_path):
         content = f.read()
         
         assert "# Squeeze 技術指標掃描 - 每日摘要" in content
-        assert "## 🚀 買入建議標的 (Top 10)" in content
-        assert "AAPL" in content
-        assert "買入 (動能增強)" in content
+        assert "## 今日無主名單" in content
+        assert "原始買入/觀察名單：3" in content
 
 def test_export_empty_results(exporter, tmp_path):
     csv_path = tmp_path / "empty.csv"
@@ -110,3 +109,75 @@ def test_export_empty_results(exporter, tmp_path):
     assert csv_path.exists()
     with open(csv_path, 'r', encoding='utf-8') as f:
         assert f.read() == ""
+
+def test_render_html_summary_groups_tracking_buys_by_ticker(exporter):
+    html = exporter.render_html_summary(
+        tracking_buys=[
+            {
+                "date": "2026-03-27",
+                "ticker": "2330.TW",
+                "name": "台積電",
+                "entry_price": 1000.0,
+                "current_price": 1100.0,
+                "return_pct": 10.0,
+                "days_tracked": 2,
+                "last_updated": "2026-03-27",
+            },
+            {
+                "date": "2026-03-25",
+                "ticker": "2330.TW",
+                "name": "台積電",
+                "entry_price": 900.0,
+                "current_price": 1100.0,
+                "return_pct": 22.22,
+                "days_tracked": 4,
+                "last_updated": "2026-03-27",
+            },
+            {
+                "date": "2026-03-26",
+                "ticker": "2317.TW",
+                "name": "鴻海",
+                "entry_price": 200.0,
+                "current_price": 210.0,
+                "return_pct": 5.0,
+                "days_tracked": 3,
+                "last_updated": "2026-03-27",
+            },
+        ]
+    )
+
+    assert html.count("<strong>2330.TW</strong>") == 1
+    assert "2026-03-27" in html
+    assert ">2<" in html
+    assert "950.00" in html
+    assert "<strong>2317.TW</strong>" in html
+
+def test_render_summary_groups_tracking_buys_by_ticker(exporter):
+    content = exporter.render_summary(
+        tracking_buys=[
+            {
+                "date": "2026-03-27",
+                "ticker": "2330.TW",
+                "name": "台積電",
+                "entry_price": 1000.0,
+                "current_price": 1100.0,
+                "return_pct": 10.0,
+                "days_tracked": 2,
+                "last_updated": "2026-03-27",
+            },
+            {
+                "date": "2026-03-25",
+                "ticker": "2330.TW",
+                "name": "台積電",
+                "entry_price": 900.0,
+                "current_price": 1100.0,
+                "return_pct": 22.22,
+                "days_tracked": 4,
+                "last_updated": "2026-03-27",
+            },
+        ]
+    )
+
+    assert content.count("**2330.TW**") == 1
+    assert "平均成本" in content
+    assert "| 2026-03-27 | 2 | **2330.TW** | 台積電 | 950.00 | 1100.00 | 2 | **10.00%** |" in content
