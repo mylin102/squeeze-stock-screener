@@ -640,20 +640,8 @@ def nightly(
         console.print("  [yellow]No recommendations.csv found, skipping analysis.[/yellow]")
 
     # ---- Step 4: Notify ----
-    console.print(f"\
-[yellow]Step 4/4: Sending notification...[/yellow]")
+    console.print(f"[yellow]Step 4/4: Sending email notification...[/yellow]")
     if not dry_run:
-        line_notifier = LineNotifier()
-        status = "SUCCESS" if scan_ok else "PARTIAL"
-        summary_msg = (
-            f"[{status}] Squeeze Nightly {date_str}\\n"
-            f"Scan: {len(matched) if not dry_run else 0} matches\\n"
-            f"Tracking: active={len(tracking_buys) if not dry_run else 0}\\n"
-            f"Report: {dq_path.name}\\n"
-            f"Benchmark: {scanner.benchmark_metadata.get('benchmark_last_date', 'N/A')}"
-        )
-        line_notifier.send_summary(summary_msg)
-
         email_notifier = EmailNotifier()
         exporter = ReportExporter()
         extra_sections_data = {
@@ -671,7 +659,7 @@ def nightly(
         attachments = [p for p in [dq_path, analysis_path] if p and p.exists()] if not dry_run else []
         subject = f"Squeeze Nightly Report {date_str}"
         email_notifier.send_email(subject, html, is_html=True, attachments=attachments)
-        console.print("  [green]Notification sent.[/green]")
+        console.print("  [green]Email sent.[/green]")
     else:
         console.print("  [grey](dry-run: skipping notification)[/grey]")
 
