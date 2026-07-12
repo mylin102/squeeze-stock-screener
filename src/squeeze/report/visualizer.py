@@ -3,8 +3,60 @@ import mplfinance as mpf
 import pandas_ta as ta
 import numpy as np
 import os
+import matplotlib
+import matplotlib.pyplot as plt
 from squeeze.engine.indicators import add_rs_indicators, TAIEX_TICKER
 import yfinance as yf
+
+# ---------------------------------------------------------------------------
+# Chinese font setup — works on macOS (local) and Ubuntu (GitHub Actions)
+# ---------------------------------------------------------------------------
+def _setup_cjk_font() -> str:
+    """Find or download a CJK font for matplotlib. Returns the font name."""
+    # 1. Check known system CJK fonts
+    candidates = [
+        "Noto Sans CJK JP",      # Ubuntu after apt install fonts-noto-cjk
+        "Noto Sans CJK SC",      # Ubuntu alt name
+        "Noto Sans TC",          # macOS / manual install
+        "WenQuanYi Micro Hei",   # Ubuntu default CJK
+        "WenQuanYi Zen Hei",
+        "Source Han Sans TW",
+        "Source Han Sans SC",
+        "PingFang TC",           # macOS
+        "STHeiti",               # macOS
+        "Microsoft JhengHei",    # Windows
+        "SimHei",                # Windows
+        "AR PL UMing TW",        # Linux
+    ]
+    available = {f.name for f in matplotlib.font_manager.fontManager.ttflist}
+    for name in candidates:
+        if name in available:
+            return name
+
+    # 2. Try to download Noto Sans CJK (GitHub Actions fallback)
+    try:
+        import urllib.request
+        import zipfile
+        import shutil
+        cache_dir = os.path.join(os.path.dirname(__file__), "..", "..", "..", ".font_cache")
+        os.makedirs(cache_dir, exist_ok=True)
+        font_path = os.path.join(cache_dir, "NotoSansCJKsc-Regular.otf")
+        if not os.path.exists(font_path):
+            url = ("https://github.com/notofonts/noto-cjk/raw/main/Sans/OTF/"
+                   "simplified-chinese/NotoSansCJKsc-Regular.otf")
+            urllib.request.urlretrieve(url, font_path)
+        if os.path.exists(font_path):
+            matplotlib.font_manager.fontManager.addfont(font_path)
+            return "Noto Sans CJK SC"
+    except Exception:
+        pass
+
+    return "sans-serif"  # fallback
+
+
+_CJK_FONT = _setup_cjk_font()
+matplotlib.rcParams["font.family"] = _CJK_FONT
+matplotlib.rcParams["axes.unicode_minus"] = False
 
 
 def plot_ticker(ticker_df: pd.DataFrame, ticker_symbol: str, output_path: str,

@@ -34,6 +34,8 @@ jobs:
 
       - name: Install dependencies
         run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-cjk
           python -m pip install --upgrade pip
           pip install . --force-reinstall
 
