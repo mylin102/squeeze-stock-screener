@@ -549,6 +549,7 @@ def nightly(
     if dry_run:
         console.print("  [grey](dry-run: skipping scan)[/grey]")
         scan_ok = True
+        chart_paths = []
     else:
         from squeeze.engine.patterns import detect_squeeze, detect_houyi_shooting_sun, detect_whale_trading
         from squeeze.engine.scanner import MarketScanner
@@ -592,6 +593,28 @@ def nightly(
             ),
         })
         console.print(f"  [green]Exported: {paths.get('markdown', 'N/A')}[/green]")
+
+        # Generate charts for top priority picks
+        top_priority = sorted(
+            [r for r in matched if r.get("ranking_score", 0) > 0],
+            key=lambda x: (x.get("ranking_score", 0), x.get("momentum", 0)), reverse=True,
+        )[:10]
+        chart_paths = []
+        if top_priority:
+            charts_dir = base_dir / date_str / "charts"
+            charts_dir.mkdir(parents=True, exist_ok=True)
+            bm_close = scanner.benchmark_close if not scanner.benchmark_close.empty else None
+            for item in top_priority:
+                ticker = item["ticker"]
+                try:
+                    ticker_data = scanner.data[ticker].dropna(subset=['Close']) if isinstance(scanner.data.columns, pd.MultiIndex) else scanner.data.dropna(subset=['Close'])
+                    display_name = item.get('name', ticker_map.get(ticker, "未知"))
+                    chart_path = charts_dir / f"{ticker.split('.')[0]}_{display_name}.png"
+                    plot_ticker(ticker_data, f"{ticker} {display_name}", str(chart_path), benchmark_close=bm_close)
+                    chart_paths.append(chart_path)
+                except Exception as e:
+                    console.print(f"  [red]Chart error {ticker}: {e}[/red]")
+            console.print(f"  [green]Charts: {len(chart_paths)} generated[/green]")
 
         # Tracking
         tracker = PerformanceTracker(Path("recommendations.csv"))
@@ -656,7 +679,9 @@ def nightly(
             tracking_sells=tracking_sells if not dry_run else [],
             extra_sections=extra_sections_data,
         )
-        attachments = [p for p in [dq_path, analysis_path] if p and p.exists()] if not dry_run else []
+        attachments = [p for p in [dq_path, analysis_path] if p and p.exists()]
+        if not dry_run:
+            attachments += [p for p in chart_paths if p.exists()]
         subject = f"Squeeze Nightly Report {date_str}"
         email_notifier.send_email(subject, html, is_html=True, attachments=attachments)
         console.print("  [green]Email sent.[/green]")
