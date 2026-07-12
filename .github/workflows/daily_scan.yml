@@ -5,6 +5,11 @@ on:
     # Taipei 19:00 = UTC 11:00 (weekdays only)
     - cron: '0 11 * * 1-5'
   workflow_dispatch:
+    inputs:
+      limit:
+        description: "Ticker limit for testing (empty = full scan)"
+        required: false
+        default: ""
 
 # Prevent concurrent runs — if a manual rerun comes while scheduled is running,
 # the new one waits.  This avoids corrupting recommendations.csv via concurrent writes.
@@ -61,8 +66,14 @@ jobs:
           SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           SMTP_RECIPIENT: ${{ secrets.SMTP_RECIPIENT }}
+        shell: bash
         run: |
-          squeeze-tw nightly 2>&1 | tee nightly_output.log
+          LIMIT="${{ inputs.limit }}"
+          if [ -n "$LIMIT" ]; then
+            squeeze-tw nightly --limit "$LIMIT" 2>&1 | tee nightly_output.log
+          else
+            squeeze-tw nightly 2>&1 | tee nightly_output.log
+          fi
           echo "status=completed" >> $GITHUB_OUTPUT
 
       - name: Commit and push tracking data
