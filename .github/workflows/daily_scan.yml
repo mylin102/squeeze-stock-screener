@@ -1,12 +1,19 @@
-name: Daily Stock Scan
+name: Nightly Screener Pipeline
 
 on:
   schedule:
-    - cron: '30 7 * * 1-5'
+    # Taipei 19:00 = UTC 11:00 (weekdays only)
+    - cron: '0 11 * * 1-5'
   workflow_dispatch:
 
+# Prevent concurrent runs — if a manual rerun comes while scheduled is running,
+# the new one waits.  This avoids corrupting recommendations.csv via concurrent writes.
+concurrency:
+  group: nightly-screener
+  cancel-in-progress: false
+
 jobs:
-  scan:
+  pipeline:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -25,7 +32,29 @@ jobs:
           python -m pip install --upgrade pip
           pip install . --force-reinstall
 
-      - name: Run Squeeze Scan
+      - name: Validate market date
+        id: market
+        run: |
+          # Quick check: ^TWII should have data for today or yesterday
+          python3 -c "
+          import yfinance as yf, pandas as pd
+          from datetime import datetime, timezone, timedelta
+          tpe = timezone(timedelta(hours=8))
+          today = datetime.now(tpe).date()
+          bm = yf.download('^TWII', period='5d', interval='1d', progress=False)
+          if bm is not None and not bm.empty:
+              last = bm.index[-1].date()
+              diff = (today - last).days
+              print(f'benchmark_last_date={last}')
+              print(f'days_stale={diff}')
+              if diff > 5:
+                  print('WARNING: Benchmark data is more than 5 days stale')
+          else:
+              print('WARNING: Could not fetch benchmark for validation')
+          "
+
+      - name: Run nightly pipeline
+        id: pipeline
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
           LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
@@ -33,10 +62,50 @@ jobs:
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           SMTP_RECIPIENT: ${{ secrets.SMTP_RECIPIENT }}
         run: |
-          squeeze-tw scan --export --plot --notify
+          squeeze-tw nightly 2>&1 | tee nightly_output.log
+          echo "status=completed" >> $GITHUB_OUTPUT
 
-      - name: Commit and push results
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Commit and push tracking data
+        if: always()
+        run: |
+          git add "exports/*/scan_results_*.csv" "exports/*/scan_summary_*.md" \
+                 "exports/*/data-quality_*.md" "exports/*/tracking-analysis_*.md" \
+                 recommendations.csv
+          if git diff --cached --quiet; then
+            echo "No changes to commit. Skipping."
+          else
+            git commit -m "chore: nightly scan results [skip ci]"
+            git push
+          fi
+
+      - name: Upload full artifacts (charts, JSON, logs)
+        if: always()
+        uses: actions/upload-artifact@v4
         with:
-          commit_message: "chore: auto-update scan results and performance tracker [skip ci]"
-          file_pattern: "exports/* recommendations.csv"
+          name: nightly-reports
+          path: |
+            exports/**/*.csv
+            exports/**/*.json
+            exports/**/*.md
+            exports/**/*.png
+            recommendations.csv
+            nightly_output.log
+          retention-days: 30
+
+      - name: Notify failure
+        if: failure()
+        env:
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
+        run: |
+          python3 -c "
+          import os, requests
+          token = os.environ.get('LINE_CHANNEL_ACCESS_TOKEN', '')
+          uid = os.environ.get('LINE_USER_ID', '')
+          if token and uid:
+              requests.post('https://api.line.me/v2/bot/message/push',
+                  headers={'Authorization': f'Bearer {token}', 'Content-Type': 'application/json'},
+                  json={'to': uid, 'messages': [{'type': 'text', 'text': '[FAILED] Squeeze nightly pipeline failed. Check GitHub Actions logs.'}]})
+          else:
+              print('LINE credentials not configured, skipping failure notification')
+          "

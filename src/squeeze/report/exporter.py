@@ -226,5 +226,11 @@ class ReportExporter:
             "signal": r.get('Signal', '觀望'),
             "has_houyi": r.get('has_houyi', False),
             "has_whale": r.get('has_whale', False),
-            "composite_score": r.get('composite_score', 0),
+            "composite_score": r.get('ranking_score', r.get('composite_score', 0)),
+            "composite_score_v2": r.get("experimental_score", r.get("composite_score_v2", 0)),
+            "rs_component_score": r.get("rs_component_score", 0),
+            "score_version": r.get("ranking_score_version", r.get("score_version", "v1")),
+            "rs_signal": r.get("rs_signal", ""),
+            "rs_above_ema20": r.get("rs_above_ema20", False),
+            "rs_new_high_60": r.get("rs_new_high_60", False),
         }
