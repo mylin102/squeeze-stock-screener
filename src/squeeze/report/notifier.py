@@ -77,7 +77,7 @@ class EmailNotifier:
         self.username = username or os.environ.get('SMTP_USERNAME')
         self.password = password or os.environ.get('SMTP_PASSWORD')
         # recipient can be "mail1@example.com, mail2@example.com"
-        self.recipient_str = recipient or os.environ.get('SMTP_RECIPIENT', 'mylin102@gmail.com')
+        self.recipient_str = recipient if recipient is not None else os.environ.get('SMTP_RECIPIENT', 'mylin102@gmail.com')
 
     def _get_recipient_list(self) -> List[str]:
         if not self.recipient_str:
@@ -96,7 +96,12 @@ class EmailNotifier:
         try:
             msg = MIMEMultipart()
             msg['From'] = self.username
-            msg['To'] = ", ".join(recipients)
+            
+            # COMMENT ADDED FOR MODIFICATION:
+            # Change visible To header to "undisclosed-recipients:;" to protect recipient privacy (BCC).
+            # The actual delivery is determined by the recipients list in sendmail(), so setting
+            # To to "undisclosed-recipients:;" hides the emails of other recipients from each other.
+            msg['To'] = "undisclosed-recipients:;"
             msg['Subject'] = subject
 
             # Attach body

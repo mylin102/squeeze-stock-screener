@@ -1,11 +1,15 @@
 import logging
 import pandas as pd
 from concurrent.futures import ProcessPoolExecutor, as_completed
+from functools import partial
 from typing import Callable, List, Dict, Any, Optional
 import numpy as np
+import yfinance as yf
 from squeeze.data.downloader import download_market_data
 from squeeze.data.fundamentals import get_fundamentals
-from squeeze.engine.ranker import calculate_value_score
+from squeeze.engine.ranker import calculate_value_score, enrich_with_scores
+
+TAIEX_TICKER = "^TWII"
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -30,6 +34,12 @@ class MarketScanner:
         self.ticker_names = ticker_names or {}
         self.data: pd.DataFrame = pd.DataFrame()
         self.fundamentals: pd.DataFrame = pd.DataFrame()
+        self.benchmark_close: pd.Series = pd.Series(dtype=float)
+        self.benchmark_metadata: Dict[str, Any] = {
+            "benchmark_symbol": TAIEX_TICKER,
+            "benchmark_source": "yfinance",
+        }
+        self._scan_id: str = ""
         self.results: List[Dict[str, Any]] = []
 
     def fetch_data(self, period: str = "2y", data: pd.DataFrame = None):
@@ -43,6 +53,24 @@ class MarketScanner:
         logger.info(f"Fetching data for {len(self.tickers)} tickers...")
         self.data = download_market_data(self.tickers, period=period)
         return self.data
+
+    def fetch_benchmark(self, period: str = "2y", ticker: str = TAIEX_TICKER) -> pd.Series:
+        """Fetch benchmark (TAIEX ^TWII) close prices for RS calculation."""
+        logger.info(f"Fetching benchmark {ticker}...")
+        self.benchmark_metadata["benchmark_period"] = period
+        try:
+            bm_df = yf.download(ticker, period=period, interval="1d", progress=False)
+            if bm_df is not None and not bm_df.empty:
+                if "Close" in bm_df.columns:
+                    self.benchmark_close = bm_df["Close"].squeeze()
+                elif "Adj Close" in bm_df.columns:
+                    self.benchmark_close = bm_df["Adj Close"].squeeze()
+                # Record the last available benchmark date
+                if isinstance(self.benchmark_close, pd.Series) and not self.benchmark_close.empty:
+                    self.benchmark_metadata["benchmark_last_date"] = str(self.benchmark_close.index[-1].date())
+        except Exception as e:
+            logger.warning(f"Failed to fetch benchmark {ticker}: {e}")
+        return self.benchmark_close
 
     def fetch_fundamentals(self):
         """
@@ -58,7 +86,8 @@ class MarketScanner:
              pattern_fn: Callable[[pd.DataFrame], Dict[str, Any]], 
              min_mkt_cap: Optional[float] = None,
              min_avg_volume: Optional[float] = None,
-             min_score: Optional[float] = None) -> List[Dict[str, Any]]:
+             min_score: Optional[float] = None,
+             benchmark_close: Optional[pd.Series] = None) -> List[Dict[str, Any]]:
         """
         Scan the downloaded market data for a given pattern and apply fundamental filters.
         """
@@ -108,8 +137,16 @@ class MarketScanner:
 
         # 3. Pattern Detection (Multiprocessing)
         results = []
+        # Generate a stable scan_id for this batch
+        from datetime import datetime
+        self._scan_id = datetime.now().strftime("scan_%Y%m%d_%H%M%S")
+        # Bind benchmark_close to pattern_fn if available (partial is picklable)
+        if benchmark_close is not None and not benchmark_close.empty:
+            wrapped_fn = partial(pattern_fn, benchmark_close=benchmark_close)
+        else:
+            wrapped_fn = pattern_fn
         with ProcessPoolExecutor() as executor:
-            future_to_ticker = {executor.submit(pattern_fn, df): ticker for ticker, df in tasks}
+            future_to_ticker = {executor.submit(wrapped_fn, df): ticker for ticker, df in tasks}
             
             for future in as_completed(future_to_ticker):
                 ticker = future_to_ticker[future]
@@ -132,5 +169,9 @@ class MarketScanner:
                         'is_squeezed': False
                     })
         
-        self.results = results
-        return results
+        self.results = enrich_with_scores(results)
+        # Attach benchmark metadata + scan_id to each result
+        for r in self.results:
+            r.update(self.benchmark_metadata)
+            r["scan_id"] = self._scan_id
+        return self.results

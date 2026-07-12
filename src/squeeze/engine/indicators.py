@@ -7,6 +7,86 @@ import pandas as pd
 import numpy as np
 import pandas_ta as ta
 
+TAIEX_TICKER = "^TWII"
+
+
+def add_rs_indicators(df: pd.DataFrame, benchmark_close: pd.Series) -> pd.DataFrame:
+    """
+    Add Relative Strength (RS) indicators to a ticker's DataFrame.
+
+    Two series are produced:
+      - RS_Ratio = Close / Benchmark_Close  (raw ratio, stable across download periods)
+      - RS_Index = 100 * RS_Ratio / RS_Ratio.iloc[0]  (base-100 for charting)
+
+    All feature computations (EMA, slope, new-high) use RS_Ratio internally so
+    they are invariant to the download period's base date.
+
+    Features (all prefixed 'RS_'):
+      - RS_Ratio: raw Close/Benchmark ratio
+      - RS_Index: base-100 index (for charting / visual comparison)
+      - RS_EMA20 / RS_EMA60: smoothed RS_Ratio
+      - RS_Slope_1d: 1-day pct_change of RS_EMA20 (%)
+      - RS_Slope_5d: 5-day pct_change of RS_EMA20 (%)  — primary momentum
+      - RS_Slope_20d: 20-day pct_change of RS_EMA20 (%) — trend momentum
+      - RS_Above_EMA20 / RS_Above_EMA60: boolean
+      - RS_EMA20_Above_EMA60: boolean
+      - RS_New_High_60 / RS_New_High_120: event (excludes current bar)
+      - RS_Percentile_60: 0-1 rank within 60 days
+      - RS_Rising_10: RS_Ratio > value 10 bars ago
+
+    Args:
+        df: Ticker DataFrame with a 'Close' column and a DatetimeIndex.
+        benchmark_close: Series of benchmark close prices, aligned by date.
+
+    Returns:
+        DataFrame with new RS_* columns added.
+    """
+    if df.empty or benchmark_close.empty:
+        return df
+
+    res = df.copy()
+
+    # Align benchmark to ticker dates via forward-fill
+    bm = benchmark_close.reindex(res.index, method="ffill")
+
+    # 1. Raw ratio (stable across download periods)
+    res["RS_Ratio"] = res["Close"] / bm
+
+    # 2. Base-100 index (for charting)
+    res["RS_Index"] = 100.0 * res["RS_Ratio"] / res["RS_Ratio"].iloc[0]
+    res["RS_Base_Date"] = res.index[0]  # record base date for reproducibility
+
+    # 3. Smoothed RS (using RS_Ratio so features are period-invariant)
+    res["RS_EMA20"] = res["RS_Ratio"].ewm(span=20, adjust=False).mean()
+    res["RS_EMA60"] = res["RS_Ratio"].ewm(span=60, adjust=False).mean()
+
+    # 4. RS Slope (multi-day pct_change for stability)
+    res["RS_Slope_1d"] = res["RS_EMA20"].pct_change(1) * 100.0
+    res["RS_Slope_5d"] = res["RS_EMA20"].pct_change(5) * 100.0
+    res["RS_Slope_20d"] = res["RS_EMA20"].pct_change(20) * 100.0
+    # Mirror 1d slope as RS_Slope for backward compat
+    res["RS_Slope"] = res["RS_Slope_1d"]
+
+    # 5. Position vs EMAs
+    res["RS_Above_EMA20"] = (res["RS_Ratio"] > res["RS_EMA20"]).fillna(False)
+    res["RS_Above_EMA60"] = (res["RS_Ratio"] > res["RS_EMA60"]).fillna(False)
+    res["RS_EMA20_Above_EMA60"] = (res["RS_EMA20"] > res["RS_EMA60"]).fillna(False)
+
+    # 6. RS New Highs (exclude current bar — compare against prior rolling max)
+    res["RS_New_High_60"] = (res["RS_Ratio"] > res["RS_Ratio"].shift(1).rolling(60, min_periods=20).max()).fillna(False)
+    res["RS_New_High_120"] = (res["RS_Ratio"] > res["RS_Ratio"].shift(1).rolling(120, min_periods=40).max()).fillna(False)
+
+    # 7. RS percentile within 60 days (0-1, for cross-stock ranking)
+    rs_min_60 = res["RS_Ratio"].rolling(60, min_periods=20).min()
+    rs_max_60 = res["RS_Ratio"].rolling(60, min_periods=20).max()
+    res["RS_Percentile_60"] = ((res["RS_Ratio"] - rs_min_60) / (rs_max_60 - rs_min_60)).fillna(0.5).clip(0, 1)
+
+    # 8. RS rising over 10 bars
+    res["RS_Rising_10"] = (res["RS_Ratio"] > res["RS_Ratio"].shift(10)).fillna(False)
+
+    return res
+
+
 def calculate_squeeze_indicators(df: pd.DataFrame) -> pd.DataFrame:
     """
     Calculate PowerSqueeze indicators and explicit Buy/Sell signals.
@@ -83,5 +163,16 @@ def calculate_squeeze_indicators(df: pd.DataFrame) -> pd.DataFrame:
 
     result['Prev_Momentum'] = result['Momentum'].shift(1).fillna(0)
     result['Signal'] = result.apply(determine_signal, axis=1)
+    
+    # 5. Trend Context (MA20)
+    # Add comments to the file for all subsequent modifications as per user preference in ~/.gemini/GEMINI.md
+    result["MA20"] = result["Close"].rolling(20).mean()
+    result["MA20_Slope"] = result["MA20"].diff()
+    result["MA20_Prev_Slope"] = result["MA20_Slope"].shift(1)
+    result["MA20_Converging"] = (
+        (result["MA20_Slope"] < 0) & 
+        (result["MA20_Slope"] > result["MA20_Prev_Slope"])
+    ).fillna(False)
+    result["Close_Above_MA20"] = (result["Close"] > result["MA20"]).fillna(False)
     
     return result
