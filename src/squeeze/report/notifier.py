@@ -1,9 +1,11 @@
 import os
 import logging
 import smtplib
+import mimetypes
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.image import MIMEImage
+from email.mime.application import MIMEApplication
 from typing import Optional, List
 from pathlib import Path
 
@@ -112,9 +114,14 @@ class EmailNotifier:
                 for path in attachments:
                     if path.exists():
                         with open(path, 'rb') as f:
-                            img_data = f.read()
-                            image = MIMEImage(img_data, name=path.name)
-                            msg.attach(image)
+                            data = f.read()
+                        mime_type, _ = mimetypes.guess_type(str(path))
+                        if mime_type and mime_type.startswith('image/'):
+                            part = MIMEImage(data, name=path.name)
+                        else:
+                            part = MIMEApplication(data, name=path.name)
+                            part.add_header('Content-Disposition', 'attachment', filename=path.name)
+                        msg.attach(part)
 
             server = smtplib.SMTP(self.smtp_server, self.smtp_port)
             server.starttls()
