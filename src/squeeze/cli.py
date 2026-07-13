@@ -40,11 +40,14 @@ def _normalize_tw_ticker(raw_ticker: str, ticker_map: dict[str, str]) -> str:
     if "." in ticker:
         return ticker
 
+    # Append .TW / .TWO for purely numeric Taiwan tickers
     if ticker.isdigit():
         for suffix in (".TW", ".TWO"):
             candidate = f"{ticker}{suffix}"
             if candidate in ticker_map:
                 return candidate
+        # Fallback: even if not in map, try .TW (most common)
+        return f"{ticker}.TW"
 
     return ticker
 

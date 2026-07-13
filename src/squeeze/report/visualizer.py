@@ -147,12 +147,40 @@ def plot_ticker(ticker_df: pd.DataFrame, ticker_symbol: str, output_path: str,
     # Ensure output directory exists
     os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
 
-    # Generate Final Plot
-    mpf.plot(plot_df, type='candle', style='charles', addplot=plots,
-             title=f"\n{ticker_symbol} - Squeeze Analysis (1yr)",
-             savefig=output_path, volume=True,
-             panel_ratios=panel_ratios,
-             datetime_format='%Y-%m',
-             xrotation=0,
-             show_nontrading=False,
-             tight_layout=True)
+    # 9. Find first trading day of each month for exact monthly tick placement
+    # Since show_nontrading=False is used, the x-axis values are integer indices.
+    # We find the start index of each month in plot_df's index.
+    month_starts = []
+    month_labels = []
+    seen_months = set()
+    for idx, date in enumerate(plot_df.index):
+        month_key = (date.year, date.month)
+        if month_key not in seen_months:
+            seen_months.add(month_key)
+            month_starts.append(idx)
+            month_labels.append(date.strftime("%Y-%m"))
+
+    # Generate Final Plot with returnfig=True to allow customizing axis ticks
+    # Added comments to comply with user rule in GEMINI.md
+    fig, axlist = mpf.plot(plot_df, type='candle', style='charles', addplot=plots,
+                           title=f"\n{ticker_symbol} - Squeeze Analysis (1yr)",
+                           volume=True,
+                           panel_ratios=panel_ratios,
+                           xrotation=0,
+                           show_nontrading=False,
+                           tight_layout=True,
+                           returnfig=True)
+
+    # Explicitly set monthly ticks and labels on the shared x-axis
+    axlist[0].set_xticks(month_starts)
+    axlist[0].set_xticklabels(month_labels)
+
+    # Enable gridlines on all axes that have visible x-axis grids
+    for ax in axlist:
+        if ax.xaxis.get_visible():
+            ax.grid(True, which='both', axis='x', color='gray', linestyle='--', alpha=0.3)
+
+    # Save the configured figure to output_path
+    fig.savefig(output_path, bbox_inches='tight')
+    plt.close(fig)
+
