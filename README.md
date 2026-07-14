@@ -28,8 +28,34 @@ squeeze-tw scan --export --plot --notify
 ```bash
 # 可直接輸入台股代碼
 PYTHONPATH=src python3 -m squeeze.cli analyze --ticker 2330
+```
 
-# 也相容完整 yfinance 代碼
+## 🌐 Web App (Streamlit)
+
+一鍵產生 K 線圖 + RS 強度 + Squeeze 指標：
+
+[![Streamlit App](https://img.shields.io/badge/Streamlit-🚀_開啟_Web_App-e94560?style=for-the-badge)](https://squeeze-tw-chart.streamlit.app)
+
+或在本地執行：
+```bash
+pip install streamlit
+streamlit run streamlit_app.py
+```
+
+### Deploy 到 Streamlit Cloud
+1. Push 此 repo 到 GitHub
+2. 到 [share.streamlit.io](https://share.streamlit.io) 選擇此 repo
+3. Entry point: `streamlit_app.py`
+4. Python version: 3.12
+5. Deploy 完成即可使用
+
+### GitHub Pages
+靜態介紹頁面位於 `docs/` 目錄，啟用 GitHub Pages：
+1. Repo Settings → Pages
+2. Source: Deploy from branch → `main` / `docs`
+
+### 也相容完整 yfinance 代碼
+```bash
 PYTHONPATH=src python3 -m squeeze.cli analyze --ticker 2330.TW
 ```
 
