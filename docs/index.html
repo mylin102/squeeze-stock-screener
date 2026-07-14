@@ -255,7 +255,7 @@ createApp({
           name: s.name || s.ticker_name || '',
           score: s.score || s.ranking_score || 0,
           momentum: s.momentum || 0,
-          rs_ratio: s.rs_ratio || s.rs,
+          rs_ratio: s.rs_index || s.rs_ratio || s.rs || 0,
           energy_level: s.energy_level || s.energy || 0,
           squeeze_on: !!s.squeeze_on,
           squeeze_fired: s.fired !== undefined ? !!s.fired : !!s.squeeze_fired,
