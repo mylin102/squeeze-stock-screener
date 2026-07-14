@@ -77,9 +77,13 @@ class MarketScanner:
         Fetch fundamental data for all tickers and calculate Value Score.
         """
         logger.info(f"Fetching fundamentals for {len(self.tickers)} tickers...")
-        raw_fundamentals = get_fundamentals(self.tickers)
-        if not raw_fundamentals.empty:
-            self.fundamentals = calculate_value_score(raw_fundamentals)
+        try:
+            raw_fundamentals = get_fundamentals(self.tickers)
+            if not raw_fundamentals.empty:
+                self.fundamentals = calculate_value_score(raw_fundamentals)
+        except Exception as e:
+            logger.error(f"Fundamental fetch failed (continuing without): {e}")
+            self.fundamentals = pd.DataFrame()
         return self.fundamentals
 
     def scan(self, 
