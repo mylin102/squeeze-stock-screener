@@ -258,7 +258,7 @@ createApp({
           rs_ratio: s.rs_ratio || s.rs,
           energy_level: s.energy_level || s.energy || 0,
           squeeze_on: !!s.squeeze_on,
-          squeeze_fired: !!s.squeeze_fired,
+          squeeze_fired: s.fired !== undefined ? !!s.fired : !!s.squeeze_fired,
           volume: s.volume || 0,
           price: s.price || s.close || 0,
           change_pct: s.change_pct || 0,
@@ -274,6 +274,9 @@ createApp({
       } catch(e) { errorMsg.value = String(e); }
       finally { isLoading.value = false; }
     }
+
+    // Kick off data fetch on mount
+    fetchData();
 
     function onSearch() {
       filter.value = 'all';
