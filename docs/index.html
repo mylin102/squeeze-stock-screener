@@ -204,14 +204,11 @@ tr.selected td { background:#e8f0fe; }
         </div>
 
         <!-- Chart -->
-        <div class="chart-placeholder" v-if="chartUrl">
-          <img :src="chartUrl" alt="Chart">
+        <div class="chart-placeholder" v-if="chartUrl && !chartError">
+          <img :src="chartUrl" alt="Chart" @error="chartError=true">
         </div>
-        <div class="chart-placeholder" v-else>
-          <p class="hint">點擊「📊 產生圖表」透過 GitHub Actions 生成 K 線圖 + RS 分析（約 2 分鐘後顯示）</p>
-          <button @click="generateChart(selected)" class="btn btn-primary" style="margin-top:12px;" :disabled="chartLoading">
-            {{ chartLoading ? '⏳ 觸發中...' : '📊 產生圖表' }}
-          </button>
+        <div class="chart-placeholder" v-else-if="chartUrl && chartError">
+          <p class="hint">📊 夜間掃描尚未為此標的生成圖表（僅限前 30 名優先標的）</p>
         </div>
       </div>
 
@@ -235,9 +232,12 @@ createApp({
     const sortBy = ref('score');
     const sortDir = ref(-1);
     const selected = ref(null);
-    const chartUrl = ref('');
-    const chartLoading = ref(false);
-    const chartRunUrl = ref('');
+    const chartError = ref(false);
+    const chartUrl = computed(() => {
+      if (!selected.value) return '';
+      const tickerStem = selected.value.ticker.split('.')[0];
+      return `charts/${tickerStem}_chart.png`;
+    });
 
     async function fetchData() {
       isLoading.value = true; errorMsg.value = '';
@@ -285,30 +285,11 @@ createApp({
 
     function selectStock(s) {
       selected.value = s;
-      chartUrl.value = '';
+      chartError.value = false;
       // Update URL
       const url = new URL(window.location);
       url.searchParams.set('s', s.ticker);
       window.history.replaceState({}, '', url);
-    }
-
-    async function generateChart(s) {
-      chartLoading.value = true; chartUrl.value = ''; chartRunUrl.value = '';
-      try {
-        const resp = await fetch('https://api.github.com/repos/mylin102/squeeze-tw-screener/actions/workflows/chart.yml/dispatches', {
-          method: 'POST',
-          headers: {'Content-Type':'application/json','Accept':'application/vnd.github.v3+json'},
-          body: JSON.stringify({ref:'main', inputs:{ticker:s.ticker,period:'1y'}})
-        });
-        if (resp.ok) {
-          // Chart will be committed to docs/charts/ by the workflow, then served via Pages
-          chartUrl.value = `charts/${s.ticker}_chart.png`;
-        } else {
-          const err = await resp.text().catch(() => 'unknown');
-          throw new Error(`Dispatch failed (HTTP ${resp.status}): ${err}`);
-        }
-      } catch(e) { console.error(e); errorMsg.value = `📊 圖表觸發失敗: ${e.message}`; }
-      finally { chartLoading.value = false; }
     }
 
     const filteredResults = computed(() => {
@@ -348,8 +329,8 @@ createApp({
     function fmtVolume(v) { if (v >= 1e8) return (v/1e8).toFixed(1)+'億'; if (v >= 1e4) return (v/1e4).toFixed(0)+'萬'; return v.toLocaleString(); }
 
     return { results, metadata, isLoading, errorMsg, search, filter, sortBy, sortDir,
-             selected, chartUrl, chartLoading, chartRunUrl,
-             fetchData, onSearch, clearFilters, selectStock, generateChart,
+             selected, chartUrl, chartError,
+             fetchData, onSearch, clearFilters, selectStock,
              filteredResults, sortedResults,
              squeezeOnCount, squeezeFiredCount, bullishCount, bearishCount,
              scoreClass, scoreColor, fmtVolume };

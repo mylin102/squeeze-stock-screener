@@ -92,6 +92,7 @@ jobs:
           git add "exports/*/scan_results_*.csv" "exports/*/scan_summary_*.md" \
                  "exports/*/data-quality_*.md" "exports/*/tracking-analysis_*.md" \
                  exports/latest/scan_results.json docs/data/latest.json \
+                 docs/charts/*.png \
                  recommendations.csv
           if git diff --cached --quiet; then
             echo "No changes to commit. Skipping."

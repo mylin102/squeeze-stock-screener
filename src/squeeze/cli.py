@@ -597,12 +597,14 @@ def nightly(
         })
         console.print(f"  [green]Exported: {paths.get('markdown', 'N/A')}[/green]")
 
-        # Generate charts for top priority picks
+        # Generate charts for top priority picks + copy to docs/charts/ for dashboard
         top_priority = sorted(
             [r for r in matched if r.get("ranking_score", 0) > 0],
             key=lambda x: (x.get("ranking_score", 0), x.get("momentum", 0)), reverse=True,
-        )[:10]
+        )[:30]
         chart_paths = []
+        docs_charts_dir = Path("docs/charts")
+        docs_charts_dir.mkdir(parents=True, exist_ok=True)
         if top_priority:
             charts_dir = base_dir / date_str / "charts"
             charts_dir.mkdir(parents=True, exist_ok=True)
@@ -615,9 +617,13 @@ def nightly(
                     chart_path = charts_dir / f"{ticker.split('.')[0]}_{display_name}.png"
                     plot_ticker(ticker_data, f"{ticker} {display_name}", str(chart_path), benchmark_close=bm_close)
                     chart_paths.append(chart_path)
+                    # Copy to docs/charts/ with predictable filename for GitHub Pages dashboard
+                    dash_chart = docs_charts_dir / f"{ticker.split('.')[0]}_chart.png"
+                    import shutil
+                    shutil.copy2(str(chart_path), str(dash_chart))
                 except Exception as e:
                     console.print(f"  [red]Chart error {ticker}: {e}[/red]")
-            console.print(f"  [green]Charts: {len(chart_paths)} generated[/green]")
+            console.print(f"  [green]Charts: {len(chart_paths)} generated, copied to {docs_charts_dir}[/green]")
 
         # Tracking
         tracker = PerformanceTracker(Path("recommendations.csv"))
