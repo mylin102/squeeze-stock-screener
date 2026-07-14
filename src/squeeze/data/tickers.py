@@ -52,5 +52,22 @@ def fetch_tickers_with_names() -> Dict[str, str]:
                         ticker_map[f"{code}{suffix}"] = name
         except Exception as e:
             print(f"Error fetching {market} stocks: {e}")
-                    
+
+    # Fallback: if website returned nothing, try loading from cached scan results
+    if not ticker_map:
+        import json, glob
+        cached = sorted(glob.glob("exports/*/scan_results_*.json"))
+        if cached:
+            try:
+                with open(cached[-1]) as f:
+                    data = json.load(f)
+                for r in data.get("results", []):
+                    tid = r.get("ticker") or r.get("symbol", "")
+                    name = r.get("name") or r.get("ticker_name", "")
+                    if tid and name:
+                        ticker_map[tid] = name
+                print(f"Loaded {len(ticker_map)} tickers from cached scan results")
+            except Exception:
+                pass
+
     return ticker_map
