@@ -208,13 +208,10 @@ tr.selected td { background:#e8f0fe; }
           <img :src="chartUrl" alt="Chart">
         </div>
         <div class="chart-placeholder" v-else>
-          <p class="hint">點擊「📊 產生圖表」透過 GitHub Actions 生成 K 線圖 + RS 分析</p>
+          <p class="hint">點擊「📊 產生圖表」透過 GitHub Actions 生成 K 線圖 + RS 分析（約 2 分鐘後顯示）</p>
           <button @click="generateChart(selected)" class="btn btn-primary" style="margin-top:12px;" :disabled="chartLoading">
-            {{ chartLoading ? '⏳ 產生中...' : '📊 產生圖表' }}
+            {{ chartLoading ? '⏳ 觸發中...' : '📊 產生圖表' }}
           </button>
-          <p v-if="chartRunUrl" style="margin-top:8px;font-size:12px;">
-            <a :href="chartRunUrl" target="_blank">查看 Actions 進度 →</a>
-          </p>
         </div>
       </div>
 
@@ -304,10 +301,13 @@ createApp({
           body: JSON.stringify({ref:'main', inputs:{ticker:s.ticker,period:'1y'}})
         });
         if (resp.ok) {
-          chartRunUrl.value = 'https://github.com/mylin102/squeeze-tw-screener/actions/workflows/chart.yml';
-          // Try to fetch from artifacts after a delay (polling not reliable, so just show link)
+          // Chart will be committed to docs/charts/ by the workflow, then served via Pages
+          chartUrl.value = `charts/${s.ticker}_chart.png`;
+        } else {
+          const err = await resp.text().catch(() => 'unknown');
+          throw new Error(`Dispatch failed (HTTP ${resp.status}): ${err}`);
         }
-      } catch(e) { console.error(e); }
+      } catch(e) { console.error(e); errorMsg.value = `📊 圖表觸發失敗: ${e.message}`; }
       finally { chartLoading.value = false; }
     }
 
