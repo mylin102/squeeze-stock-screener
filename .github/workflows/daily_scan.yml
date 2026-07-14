@@ -79,16 +79,17 @@ jobs:
       - name: Commit and push tracking data
         if: always()
         run: |
-          # Copy latest scan JSON to fixed path for Web dashboard
+          # Copy latest scan JSON to fixed path for Web dashboard (same-origin)
           _latest_json=$(ls -t exports/*/scan_results_*.json 2>/dev/null | head -1)
           if [ -n "$_latest_json" ]; then
-            mkdir -p exports/latest
+            mkdir -p exports/latest docs/data
             cp "$_latest_json" exports/latest/scan_results.json
-            echo "Copied $_latest_json → exports/latest/scan_results.json"
+            cp "$_latest_json" docs/data/latest.json
+            echo "Copied $_latest_json → exports/latest/ & docs/data/"
           fi
           git add "exports/*/scan_results_*.csv" "exports/*/scan_summary_*.md" \
                  "exports/*/data-quality_*.md" "exports/*/tracking-analysis_*.md" \
-                 exports/latest/scan_results.json \
+                 exports/latest/scan_results.json docs/data/latest.json \
                  recommendations.csv
           if git diff --cached --quiet; then
             echo "No changes to commit. Skipping."
