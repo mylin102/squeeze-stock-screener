@@ -1,0 +1,40 @@
+name: Generate Chart
+
+on:
+  workflow_dispatch:
+    inputs:
+      ticker:
+        description: '台灣股票代號 (e.g. 2303)'
+        required: true
+        type: string
+      period:
+        description: '資料期間'
+        required: false
+        default: '1y'
+        type: choice
+        options: [1mo, 3mo, 6mo, 1y, 2y, 5y]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          pip install yfinance pandas pandas-ta mplfinance matplotlib requests scipy lxml html5lib jinja2
+          pip install -e .
+      - name: Generate chart
+        run: |
+          mkdir -p exports/single
+          PYTHONPATH=src python3 -m squeeze.cli plot \
+            --ticker ${{ inputs.ticker }} \
+            --period ${{ inputs.period }} \
+            --output exports/single/${{ inputs.ticker }}_chart.png
+      - name: Upload chart artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: chart-${{ inputs.ticker }}
+          path: exports/single/${{ inputs.ticker }}_chart.png
