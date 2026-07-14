@@ -119,12 +119,12 @@ class ReportExporter:
         sell_results = sell_results or []
 
         # Take Top 10 for display in report
-        top_buys = sorted(buy_results, key=lambda x: x.get('momentum', 0), reverse=True)[:10]
-        top_sells = sorted(sell_results, key=lambda x: x.get('momentum', 0), reverse=False)[:10]
+        top_buys = sorted(buy_results, key=lambda x: float(x.get('momentum') or 0), reverse=True)[:10]
+        top_sells = sorted(sell_results, key=lambda x: float(x.get('momentum') or 0), reverse=False)[:10]
         extra_sections = extra_sections or {}
-        top_priority = sorted(extra_sections.get("priority", []), key=lambda x: (x.get('composite_score', 0), x.get('momentum', 0)), reverse=True)[:10]
-        top_houyi = sorted(extra_sections.get("houyi", []), key=lambda x: x.get('rally_pct', 0), reverse=True)[:10]
-        top_whale = sorted(extra_sections.get("whale", []), key=lambda x: x.get('weekly_momentum', 0), reverse=True)[:10]
+        top_priority = sorted(extra_sections.get("priority", []), key=lambda x: (float(x.get('composite_score') or 0), float(x.get('momentum') or 0)), reverse=True)[:10]
+        top_houyi = sorted(extra_sections.get("houyi", []), key=lambda x: float(x.get('rally_pct') or 0), reverse=True)[:10]
+        top_whale = sorted(extra_sections.get("whale", []), key=lambda x: float(x.get('weekly_momentum') or 0), reverse=True)[:10]
         render_data = {
             "date": self._get_taiwan_now().strftime("%Y-%m-%d %H:%M:%S") + " (TST)",
             "app_version": self._get_app_version(),
@@ -156,14 +156,14 @@ class ReportExporter:
         buy_results = buy_results or []
         sell_results = sell_results or []
 
-        # Take Top 10 for display
-        top_buys = sorted(buy_results, key=lambda x: x.get('momentum', 0), reverse=True)[:10]
-        top_sells = sorted(sell_results, key=lambda x: x.get('momentum', 0), reverse=False)[:10]
+        # Take Top 10 for display (P0: float() guard against str/float TypeError)
+        top_buys = sorted(buy_results, key=lambda x: float(x.get('momentum') or 0), reverse=True)[:10]
+        top_sells = sorted(sell_results, key=lambda x: float(x.get('momentum') or 0), reverse=False)[:10]
         
         extra_sections = extra_sections or {}
-        top_priority = sorted(extra_sections.get("priority", []), key=lambda x: (x.get('composite_score', 0), x.get('momentum', 0)), reverse=True)[:10]
-        top_houyi = sorted(extra_sections.get("houyi", []), key=lambda x: x.get('rally_pct', 0), reverse=True)[:10]
-        top_whale = sorted(extra_sections.get("whale", []), key=lambda x: x.get('weekly_momentum', 0), reverse=True)[:10]
+        top_priority = sorted(extra_sections.get("priority", []), key=lambda x: (float(x.get('composite_score') or 0), float(x.get('momentum') or 0)), reverse=True)[:10]
+        top_houyi = sorted(extra_sections.get("houyi", []), key=lambda x: float(x.get('rally_pct') or 0), reverse=True)[:10]
+        top_whale = sorted(extra_sections.get("whale", []), key=lambda x: float(x.get('weekly_momentum') or 0), reverse=True)[:10]
         render_data = {
             "date": self._get_taiwan_now().strftime("%Y-%m-%d %H:%M:%S") + " (TST)",
             "app_version": self._get_app_version(),

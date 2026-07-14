@@ -673,7 +673,7 @@ def nightly(
         extra_sections_data = {
             "houyi": sorted([r for r in houyi_results if r.get("is_houyi")], key=lambda x: x.get("rally_pct", 0), reverse=True) if not dry_run else [],
             "whale": sorted([r for r in whale_results if r.get("is_whale")], key=lambda x: x.get("weekly_momentum", 0), reverse=True) if not dry_run else [],
-            "priority": sorted(matched, key=lambda x: (x.get("ranking_score", 0), x.get("momentum", 0)), reverse=True) if not dry_run else [],
+            "priority": sorted(matched, key=lambda x: (float(x.get('ranking_score') or 0), float(x.get('momentum') or 0)), reverse=True) if not dry_run else [],
         }
         html = exporter.render_html_summary(
             buy_results=today_buys if not dry_run else [],
