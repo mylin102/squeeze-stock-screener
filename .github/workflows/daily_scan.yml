@@ -79,6 +79,8 @@ jobs:
       - name: Commit and push tracking data
         if: always()
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           # Copy latest scan JSON to fixed path for Web dashboard (same-origin)
           _latest_json=$(ls -t exports/*/scan_results_*.json 2>/dev/null | head -1)
           if [ -n "$_latest_json" ]; then
