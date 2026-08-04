@@ -1,5 +1,6 @@
 import json
 import csv
+import math
 from pathlib import Path
 import pytest
 from squeeze.report.exporter import ReportExporter
@@ -80,6 +81,17 @@ def test_to_json(exporter, mock_results, tmp_path):
         assert data["metadata"]["count"] == 3
         assert len(data["results"]) == 3
         assert data["results"][0]["ticker"] == "AAPL"
+
+
+def test_to_json_replaces_non_finite_values_with_null(exporter, tmp_path):
+    json_path = tmp_path / "browser-safe.json"
+    exporter.to_json(
+        [{"ticker": "2330", "marketCap": math.nan, "trailingPE": math.inf}],
+        json_path,
+    )
+
+    data = json.loads(json_path.read_text(encoding="utf-8"))
+    assert data["results"] == [{"ticker": "2330", "marketCap": None, "trailingPE": None}]
 
 def test_to_markdown(exporter, mock_results, tmp_path):
     # Add Signal to mock results to match new logic

@@ -1,5 +1,7 @@
 import csv
 import json
+import math
+import numbers
 import tomllib
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -90,7 +92,25 @@ class ReportExporter:
         }
         
         with open(path, 'w', encoding='utf-8') as f:
-            json.dump(data, f, indent=2, ensure_ascii=False)
+            json.dump(self._json_safe(data), f, indent=2, ensure_ascii=False, allow_nan=False)
+
+    @classmethod
+    def _json_safe(cls, value: Any) -> Any:
+        """Convert non-finite and NumPy numeric values into browser-safe JSON."""
+        if isinstance(value, dict):
+            return {key: cls._json_safe(item) for key, item in value.items()}
+        if isinstance(value, (list, tuple)):
+            return [cls._json_safe(item) for item in value]
+        if isinstance(value, bool) or value is None or isinstance(value, str):
+            return value
+        if isinstance(value, numbers.Integral):
+            return int(value)
+        if isinstance(value, numbers.Real):
+            normalized = float(value)
+            return normalized if math.isfinite(normalized) else None
+        if hasattr(value, "item"):
+            return cls._json_safe(value.item())
+        return value
 
     def to_markdown(self, results: List[Dict[str, Any]], path: Path, extra_sections: Optional[Dict[str, List[Dict[str, Any]]]] = None) -> None:
         """Renders the Markdown summary using Jinja2."""
