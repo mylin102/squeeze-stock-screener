@@ -597,11 +597,11 @@ def nightly(
         })
         console.print(f"  [green]Exported: {paths.get('markdown', 'N/A')}[/green]")
 
-        # Generate charts for top priority picks + copy to docs/charts/ for dashboard
+        # Add comment: increase chart generation limit for top priority picks from 30 to 100
         top_priority = sorted(
             [r for r in matched if r.get("ranking_score", 0) > 0],
             key=lambda x: (x.get("ranking_score", 0), x.get("momentum", 0)), reverse=True,
-        )[:30]
+        )[:100]
         chart_paths = []
         docs_charts_dir = Path("docs/charts")
         docs_charts_dir.mkdir(parents=True, exist_ok=True)

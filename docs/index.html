@@ -166,8 +166,9 @@ tr.selected td { background:#e8f0fe; }
         <div class="chart-placeholder" v-if="chartUrl && !chartError">
           <img :src="chartUrl" alt="Chart" @error="chartError=true">
         </div>
+        <!-- Add comment: update hint text from top 30 to top 100 priority targets -->
         <div class="chart-placeholder" v-else-if="chartUrl && chartError">
-          <p class="hint">📊 夜間掃描尚未為此標的生成圖表（僅限前 30 名優先標的）</p>
+          <p class="hint">📊 夜間掃描尚未為此標的生成圖表（僅限前 100 名優先標的）</p>
         </div>
       </div>
 
