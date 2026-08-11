@@ -614,7 +614,8 @@ def nightly(
                 try:
                     ticker_data = scanner.data[ticker].dropna(subset=['Close']) if isinstance(scanner.data.columns, pd.MultiIndex) else scanner.data.dropna(subset=['Close'])
                     display_name = item.get('name', ticker_map.get(ticker, "未知"))
-                    chart_path = charts_dir / f"{ticker.split('.')[0]}_{display_name}.png"
+                    # Add comment: sanitize display_name using _safe_chart_stem to avoid illegal characters (e.g. '*') in artifact upload
+                    chart_path = charts_dir / f"{_safe_chart_stem(ticker, display_name)}.png"
                     plot_ticker(ticker_data, f"{ticker} {display_name}", str(chart_path), benchmark_close=bm_close)
                     chart_paths.append(chart_path)
                     # Copy to docs/charts/ with predictable filename for GitHub Pages dashboard

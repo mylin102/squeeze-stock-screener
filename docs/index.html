@@ -171,7 +171,8 @@ tr.selected td { background:#e8f0fe; }
               <td :style="{color:s.momentum>0?'#10b981':'#e94560',fontWeight:700}">{{ s.momentum > 0 ? '📈' : '📉' }} {{ s.momentum?.toFixed(1) }}</td>
               <td>{{ s.energy_level || '—' }}</td>
               <td class="font-mono">{{ s.rs_ratio?.toFixed(1) || '—' }}</td>
-              <td><button class="btn btn-primary btn-sm" @click.stop="generateChart(s)">📊 圖表</button></td>
+              <!-- Add comment: call selectStock(s) on chart button click to trigger detail panel and display chart -->
+              <td><button class="btn btn-primary btn-sm" @click.stop="selectStock(s)">📊 圖表</button></td>
             </tr>
           </tbody>
         </table>
@@ -284,12 +285,16 @@ createApp({
     }
 
     function selectStock(s) {
+      // Add comment: update selected stock, reset chart error, update URL, and scroll to detail panel smoothly
       selected.value = s;
       chartError.value = false;
-      // Update URL
       const url = new URL(window.location);
       url.searchParams.set('s', s.ticker);
       window.history.replaceState({}, '', url);
+      Vue.nextTick(() => {
+        const el = document.querySelector('.detail-panel');
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
     }
 
     const filteredResults = computed(() => {

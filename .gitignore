@@ -36,3 +36,4 @@ Thumbs.db
 # Keep the directory but ignore specific artifacts if desired
 # exports/
 logs/
+.gstack/
