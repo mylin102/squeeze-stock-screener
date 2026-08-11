@@ -139,6 +139,38 @@ tr.selected td { background:#e8f0fe; }
         </div>
       </div>
 
+      <!-- Add comment: detail panel moved above table for immediate chart visualization when selected -->
+      <div v-if="selected" class="card detail-panel">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+          <h2 style="font-size:22px;font-weight:900;">
+            {{ selected.ticker }} {{ selected.name || '' }}
+            <span style="font-size:14px;font-weight:400;color:#666;margin-left:8px;">{{ selected.industry || '' }}</span>
+          </h2>
+          <button @click="selected=null" style="background:none;border:none;font-size:24px;cursor:pointer;color:#999;">✕</button>
+        </div>
+
+        <div class="stat-grid" style="margin-top:16px;">
+          <div class="stat-card"><div class="label">Squeeze 評分</div><div class="value" :style="{color:scoreColor(selected.score)}">{{ (selected.score||0).toFixed(1) }}</div></div>
+          <div class="stat-card"><div class="label">Squeeze 狀態</div><div class="value">
+            <span v-if="selected.squeeze_fired" style="color:#f59e0b;">🔥 釋放</span>
+            <span v-else-if="selected.squeeze_on" style="color:#e94560;">🔒 壓縮</span>
+            <span v-else style="color:#10b981;">🔓 正常</span>
+          </div></div>
+          <div class="stat-card"><div class="label">動能</div><div class="value" :style="{color:selected.momentum>0?'#10b981':'#e94560'}">{{ selected.momentum?.toFixed(1) || '—' }}</div></div>
+          <div class="stat-card"><div class="label">能量級別</div><div class="value">{{ selected.energy_level || '—' }}</div></div>
+          <div class="stat-card"><div class="label">RS 比率</div><div class="value">{{ selected.rs_ratio?.toFixed(1) || '—' }}</div></div>
+          <div class="stat-card"><div class="label">成交量</div><div class="value" style="font-size:18px;">{{ selected.volume ? fmtVolume(selected.volume) : '—' }}</div></div>
+        </div>
+
+        <!-- Chart -->
+        <div class="chart-placeholder" v-if="chartUrl && !chartError">
+          <img :src="chartUrl" alt="Chart" @error="chartError=true">
+        </div>
+        <div class="chart-placeholder" v-else-if="chartUrl && chartError">
+          <p class="hint">📊 夜間掃描尚未為此標的生成圖表（僅限前 30 名優先標的）</p>
+        </div>
+      </div>
+
       <!-- Results Table -->
       <div class="card" style="padding:0;overflow-x:auto;">
         <table>
@@ -178,38 +210,6 @@ tr.selected td { background:#e8f0fe; }
         </table>
         <div v-if="sortedResults.length===0" style="text-align:center;padding:48px;color:#999;">
           無符合條件的標的
-        </div>
-      </div>
-
-      <!-- Detail Panel -->
-      <div v-if="selected" class="card detail-panel">
-        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
-          <h2 style="font-size:22px;font-weight:900;">
-            {{ selected.ticker }} {{ selected.name || '' }}
-            <span style="font-size:14px;font-weight:400;color:#666;margin-left:8px;">{{ selected.industry || '' }}</span>
-          </h2>
-          <button @click="selected=null" style="background:none;border:none;font-size:24px;cursor:pointer;color:#999;">✕</button>
-        </div>
-
-        <div class="stat-grid" style="margin-top:16px;">
-          <div class="stat-card"><div class="label">Squeeze 評分</div><div class="value" :style="{color:scoreColor(selected.score)}">{{ (selected.score||0).toFixed(1) }}</div></div>
-          <div class="stat-card"><div class="label">Squeeze 狀態</div><div class="value">
-            <span v-if="selected.squeeze_fired" style="color:#f59e0b;">🔥 釋放</span>
-            <span v-else-if="selected.squeeze_on" style="color:#e94560;">🔒 壓縮</span>
-            <span v-else style="color:#10b981;">🔓 正常</span>
-          </div></div>
-          <div class="stat-card"><div class="label">動能</div><div class="value" :style="{color:selected.momentum>0?'#10b981':'#e94560'}">{{ selected.momentum?.toFixed(1) || '—' }}</div></div>
-          <div class="stat-card"><div class="label">能量級別</div><div class="value">{{ selected.energy_level || '—' }}</div></div>
-          <div class="stat-card"><div class="label">RS 比率</div><div class="value">{{ selected.rs_ratio?.toFixed(1) || '—' }}</div></div>
-          <div class="stat-card"><div class="label">成交量</div><div class="value" style="font-size:18px;">{{ selected.volume ? fmtVolume(selected.volume) : '—' }}</div></div>
-        </div>
-
-        <!-- Chart -->
-        <div class="chart-placeholder" v-if="chartUrl && !chartError">
-          <img :src="chartUrl" alt="Chart" @error="chartError=true">
-        </div>
-        <div class="chart-placeholder" v-else-if="chartUrl && chartError">
-          <p class="hint">📊 夜間掃描尚未為此標的生成圖表（僅限前 30 名優先標的）</p>
         </div>
       </div>
 
