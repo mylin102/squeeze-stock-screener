@@ -18,11 +18,14 @@ def fetch_tickers_with_names() -> Dict[str, str]:
     """
     Fetch Taiwan tickers and names from TWSE and TPEx.
     Returns a dictionary mapping ticker symbols (.TW/.TWO) to Chinese names.
+
+    Note: Emerging market (興櫃, strMode=5) is intentionally excluded because
+    its liquidity is too low for reliable signal execution.
     """
     urls = {
         "TWSE": "https://isin.twse.com.tw/isin/C_public.jsp?strMode=2",
+        # 上櫃（TPEx）only — Emerging（興櫃, strMode=5）is excluded due to low liquidity
         "TPEx": "https://isin.twse.com.tw/isin/C_public.jsp?strMode=4",
-        "Emerging": "https://isin.twse.com.tw/isin/C_public.jsp?strMode=5",
     }
     
     ticker_map = {}
@@ -47,7 +50,7 @@ def fetch_tickers_with_names() -> Dict[str, str]:
                     code = parts[0].strip()
                     name = parts[1].strip()
                     if len(code) == 4 and code.isdigit():
-                        # yfinance suffixes: .TW for TWSE, .TWO for TPEx and Emerging
+                        # yfinance suffixes: .TW for TWSE, .TWO for TPEx
                         suffix = ".TW" if market == "TWSE" else ".TWO"
                         ticker_map[f"{code}{suffix}"] = name
         except Exception as e:
