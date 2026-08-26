@@ -94,44 +94,82 @@ class MarketScanner:
              benchmark_close: Optional[pd.Series] = None) -> List[Dict[str, Any]]:
         """
         Scan the downloaded market data for a given pattern and apply fundamental filters.
+
+        Volume filtering (min_avg_volume) is applied in two stages:
+        - Stage 1 (fundamentals path): filters via yfinance 'averageVolume' field
+          when fundamentals have been fetched (fetch_fundamentals() was called).
+        - Stage 2 (OHLCV path): ALWAYS applies min_avg_volume using the 20-day average
+          of the downloaded Volume column, independent of fundamentals. This ensures
+          low-liquidity stocks (< min_avg_volume shares/day) are always excluded even
+          when fundamentals are not fetched.
+
+        Args:
+            pattern_fn: Pattern detection function to apply to each ticker's OHLCV DataFrame.
+            min_mkt_cap: Minimum market cap (in TWD). Requires fundamentals.
+            min_avg_volume: Minimum average daily volume (in shares, NOT lots).
+                            e.g. 500 lots = 500_000 shares.
+                            Applied from OHLCV data (always) and fundamentals (if available).
+            min_score: Minimum value score. Requires fundamentals.
+            benchmark_close: Optional benchmark (e.g. TAIEX) close series for RS calculation.
         """
         if self.data.empty:
             logger.warning("No data to scan. Call fetch_data() first.")
             return []
 
-        # 1. Apply fundamental filters first if data is available
-        filtered_tickers = self.tickers
+        # ── Step 1: Fundamental-based filters (only when fundamentals are available) ──
+        filtered_tickers = set(self.tickers)
         fundamental_map = {}
-        
+
         if not self.fundamentals.empty:
             df_fund = self.fundamentals.copy()
-            
-            # Apply filters
+
+            # Apply fundamental filters
             if min_mkt_cap is not None:
                 df_fund = df_fund[df_fund['marketCap'] >= min_mkt_cap]
             if min_avg_volume is not None:
+                # fundamentals averageVolume is already in shares
                 df_fund = df_fund[df_fund['averageVolume'] >= min_avg_volume]
             if min_score is not None:
                 df_fund = df_fund[df_fund['value_score'] >= min_score]
-                
-            filtered_tickers = df_fund['ticker'].tolist()
+
+            filtered_tickers = set(df_fund['ticker'].tolist())
             # Create a map for easy lookup later
             fundamental_map = df_fund.set_index('ticker').to_dict('index')
-            logger.info(f"Fundamental filtering reduced tickers from {len(self.tickers)} to {len(filtered_tickers)}")
+            logger.info(
+                f"Fundamental filtering reduced tickers from {len(self.tickers)} to {len(filtered_tickers)}"
+            )
 
-        # 2. Prepare ticker tasks
+        # ── Step 2: Build ticker tasks with OHLCV-based volume filter ─────────────────
+        # This filter runs regardless of whether fundamentals were fetched, so
+        # min_avg_volume is always honoured even in fundamentals-free mode.
+        _VOLUME_LOOKBACK = 20  # trading days for avg volume calculation
         tasks = []
+
         if len(self.tickers) == 1:
+            # Single-ticker mode: data is a flat DataFrame, not MultiIndex
             ticker = self.tickers[0]
             if ticker in filtered_tickers and not self.data.empty:
                 tasks.append((ticker, self.data))
         else:
             for ticker in filtered_tickers:
                 try:
-                    if ticker in self.data.columns.levels[0]:
-                        ticker_df = self.data[ticker].dropna(subset=['Close'])
-                        if not ticker_df.empty:
-                            tasks.append((ticker, ticker_df))
+                    if ticker not in self.data.columns.get_level_values(0):
+                        continue
+                    ticker_df = self.data[ticker].dropna(subset=['Close'])
+                    if ticker_df.empty:
+                        continue
+
+                    # OHLCV-based volume filter: skip if recent avg volume is too low
+                    if min_avg_volume is not None and 'Volume' in ticker_df.columns:
+                        recent_vol = ticker_df['Volume'].tail(_VOLUME_LOOKBACK)
+                        avg_vol = recent_vol.mean()
+                        if pd.isna(avg_vol) or avg_vol < min_avg_volume:
+                            logger.debug(
+                                f"Skipping {ticker}: avg 20d volume {avg_vol:,.0f} < {min_avg_volume:,.0f}"
+                            )
+                            continue
+
+                    tasks.append((ticker, ticker_df))
                 except (KeyError, AttributeError):
                     continue
 

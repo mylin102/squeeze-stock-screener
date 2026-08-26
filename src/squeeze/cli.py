@@ -227,7 +227,8 @@ def scan(
     output_dir: Optional[Path] = typer.Option(None, "--output-dir", "-o", help="Output directory for reports and charts"),
     notify: bool = typer.Option(False, "--notify", help="Send notification summary (e.g., via LINE)"),
     min_mkt_cap: Optional[float] = typer.Option(None, "--min-mkt-cap", help="Minimum market capitalization (in billion TWD)"),
-    min_volume: Optional[float] = typer.Option(None, "--min-volume", help="Minimum average daily volume"),
+    # Default 500 lots/day = 500_000 shares/day; use --min-volume 0 to disable
+    min_volume: Optional[float] = typer.Option(500_000, "--min-volume", help="Minimum average daily volume in shares (default: 500,000 = 500 lots). Set to 0 to disable."),
     min_score: Optional[float] = typer.Option(None, "--min-score", help="Minimum Value Score (0.0 - 1.0)"),
     min_price: Optional[float] = typer.Option(None, "--min-price", help="Minimum stock price (TWD)"),
     max_price: Optional[float] = typer.Option(None, "--max-price", help="Maximum stock price (TWD)"),
@@ -281,29 +282,38 @@ def scan(
     
     console.print(f"[green]Scanning {len(all_tickers)} tickers...[/green]")
     scanner = MarketScanner(all_tickers, ticker_names=ticker_map)
-    
-    has_fund_filters = any([min_mkt_cap, min_volume, min_score])
+
+    # Normalise min_volume: treat 0 as "disabled" (pass None to scanner)
+    effective_min_volume = min_volume if (min_volume is not None and min_volume > 0) else None
+    if effective_min_volume is not None:
+        console.print(
+            f"[yellow]Volume filter: avg 20d volume >= {effective_min_volume:,.0f} shares "
+            f"({effective_min_volume / 1000:,.0f} lots)[/yellow]"
+        )
+
+    # Fundamentals are needed only for mkt_cap and score filters; volume is handled via OHLCV
+    has_fund_filters = any([min_mkt_cap, min_score])
     if has_fund_filters:
         with console.status("[bold green]Fetching fundamentals...[/bold green]"):
             scanner.fetch_fundamentals()
-            
+
     with console.status("[bold green]Downloading market data...[/bold green]"):
         scanner.fetch_data(period=period)
-    
+
     # Fetch benchmark (TAIEX) for RS calculation
     with console.status("[bold green]Fetching benchmark (TAIEX)...[/bold green]"):
         scanner.fetch_benchmark(period=period)
-        
+
     with console.status("[bold green]Analyzing patterns...[/bold green]"):
         mkt_cap_val = min_mkt_cap * 1e9 if min_mkt_cap else None
         bm_close = scanner.benchmark_close if not scanner.benchmark_close.empty else None
-        results = scanner.scan(config['fn'], min_mkt_cap=mkt_cap_val, min_avg_volume=min_volume, min_score=min_score, benchmark_close=bm_close)
+        results = scanner.scan(config['fn'], min_mkt_cap=mkt_cap_val, min_avg_volume=effective_min_volume, min_score=min_score, benchmark_close=bm_close)
 
     extra_sections = {}
     if pattern == "squeeze":
         with console.status("[bold green]Checking Houyi/Whale matches...[/bold green]"):
-            houyi_results = scanner.scan(detect_houyi_shooting_sun, min_mkt_cap=mkt_cap_val, min_avg_volume=min_volume, min_score=min_score, benchmark_close=bm_close)
-            whale_results = scanner.scan(detect_whale_trading, min_mkt_cap=mkt_cap_val, min_avg_volume=min_volume, min_score=min_score, benchmark_close=bm_close)
+            houyi_results = scanner.scan(detect_houyi_shooting_sun, min_mkt_cap=mkt_cap_val, min_avg_volume=effective_min_volume, min_score=min_score, benchmark_close=bm_close)
+            whale_results = scanner.scan(detect_whale_trading, min_mkt_cap=mkt_cap_val, min_avg_volume=effective_min_volume, min_score=min_score, benchmark_close=bm_close)
         matched = _attach_pattern_flags([r for r in results if config['filter'](r)], houyi_results, whale_results)
         score_key = "experimental_score" if score_version == "v2" else "ranking_score"
         extra_sections = {
